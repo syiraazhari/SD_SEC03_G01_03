@@ -8335,9 +8335,9 @@ h1, h2, h3, h4, h5,
 
 /* Style the checkmark/indicator */
 .checkbox-primary {
-  color: #f35588; }
+  color: #7c86f7; }
   .checkbox-primary input:checked ~ .checkmark:after {
-    color: #f35588; }
+    color: #7c86f7; }
 
 .btn {
   cursor: pointer;
@@ -8349,30 +8349,30 @@ h1, h2, h3, h4, h5,
   .btn:hover, .btn:active, .btn:focus {
     outline: none; }
   .btn.btn-primary {
-    background: #f35588;
-    border: 1px solid #f35588;
+    background: #5562f3;
+    border: 1px solid #5562f3;
     color: #fff;
-    background: #f75959;
-    background: -moz-linear-gradient(-45deg, #f75959 0%, #f35587 100%);
-    background: -webkit-gradient(left top, right bottom, color-stop(0%, #f75959), color-stop(100%, #f35587));
-    background: -webkit-linear-gradient(-45deg, #f75959 0%, #f35587 100%);
-    background: -o-linear-gradient(-45deg, #f75959 0%, #f35587 100%);
-    background: -ms-linear-gradient(-45deg, #f75959 0%, #f35587 100%);
-    background: -webkit-linear-gradient(315deg, #f75959 0%, #f35587 100%);
-    background: -o-linear-gradient(315deg, #f75959 0%, #f35587 100%);
-    background: linear-gradient(135deg, #f75959 0%, #f35587 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f75959', endColorstr='#f35587', GradientType=1 ); }
+    background: #7c86f7;
+    background: -moz-linear-gradient(-45deg, #7c86f7 0%, #0c1ff5 100%);
+    background: -webkit-gradient(left top, right bottom, color-stop(0%, #7c86f7), color-stop(100%, #0c1ff5));
+    background: -webkit-linear-gradient(-45deg, #7c86f7 0%, #0c1ff5 100%);
+    background: -o-linear-gradient(-45deg, #7c86f7 0%, #0c1ff5 100%);
+    background: -ms-linear-gradient(-45deg, #7c86f7 0%, #0c1ff5 100%);
+    background: -webkit-linear-gradient(315deg, #7c86f7 0%, #0c1ff5 100%);
+    background: -o-linear-gradient(315deg, #7c86f7 0%, #0c1ff5 100%);
+    background: linear-gradient(135deg, #7c86f7 0%, #0c1ff5 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7c86f7', endColorstr='#0c1ff5', GradientType=1 ); }
     .btn.btn-primary:hover {
-      border: 1px solid #f35588;
-      background: #f35588;
+      border: 1px solid #7c86f7;
+      background: #7c86f7;
       color: #fff; }
     .btn.btn-primary.btn-outline-primary {
-      border: 1px solid #f35588;
+      border: 1px solid #7c86f7;
       background: transparent;
-      color: #f35588; }
+      color: #7c86f7; }
       .btn.btn-primary.btn-outline-primary:hover {
         border: 1px solid transparent;
-        background: #f35588;
+        background:#7c86f7;
         color: #fff; }
   .btn.btn-white {
     background: #fff;
