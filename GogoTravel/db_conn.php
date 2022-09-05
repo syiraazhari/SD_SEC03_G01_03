@@ -22,7 +22,14 @@
 
       if($row["usertype"]=="user")
       {
-          header("location:main.php");
+        header("location:main.php");
+        $_SESSION['login']=true;
+
+      }
+
+      elseif($row["usertype"]=="staff")
+      {
+        header("location:staffdash.php");
       }
 
       elseif($row["usertype"]=="admin")

@@ -8,7 +8,6 @@ if(isset($_POST['login'])) {
   if($email === "Admin@gmail.com" && $password === "123") {
     $_SESSION['email'] = $email;
   } else {
-	$username = stripcslashes($username);
     $email= stripcslashes($email);
     $password = stripcslashes($password);
     $email = mysqli_real_escape_string($conn, $email);
@@ -19,19 +18,13 @@ if(isset($_POST['login'])) {
     $count = mysqli_num_rows($result);
   
     if($count == 1){
-	  $_SESSION['login']=true;
-      $_SESSION['username'] = $username;
+      $_SESSION['email'] = $email;
       $_SESSION['id'] = $row['id'];
     }
-	else 
-		{
-			$_SESSION['login']=false;
-		}
   }
 } 
 else if (isset($_POST['logout'])) {
   session_destroy();
-  unset($_SESSION['username']);
   session_start();
 }
 ?>
@@ -67,16 +60,12 @@ else if (isset($_POST['logout'])) {
 							  </button>
 
 							  <div class="collapse navbar-collapse justify-content-end align-items-center" id="navbarSupportedContent">
-							    <ul class="navbar-nav">
-									<li><a href="main.php">Home</a></li>				
-									<li><a href="services.php">Service</a></li>
-									<li><a href="gallery.php">Gallery</a></li>
-									<li><a href="about.php">About</a></li>	
-									<li><a href="faq.php">Faq</a></li>
-									<li><a href="contact.php">Contact</a></li>
+							    <ul class="navbar-nav">				
+									<li><a href="admin-services.php">Service</a></li>
+									<li><a href="staffcont.php">Users</a></li>	
 									<!-- Dropdown -->
                                     
-                                    <?php
+									<?php
                                     //if($_SESSION['login']==true){
 										//$username=$_SESSION['username'];
 										echo "<li class='dropdown'>

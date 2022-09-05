@@ -62,24 +62,25 @@ else if (isset($_POST['logout'])) {
 							  <div class="collapse navbar-collapse justify-content-end align-items-center" id="navbarSupportedContent">
 							    <ul class="navbar-nav">				
 									<li><a href="admin-services.php">Service</a></li>
-									<li><a href="staffcont.php">Staff</a></li>	
+									<li><a href="staffcont.php">Staff</a></li>
+									<li><a href="#">User</a></li>	
 									<!-- Dropdown -->
                                     
-                                    <?php
-                                    if(isset($_SESSION["email"])){
-								    echo "<li class='dropdown'>
-								      <a class='dropdown-toggle' href='#' id='navbardrop' data-toggle='dropdown'>
-								        Log-in
-								      </a>
-								      <div class='dropdown-menu'>
-								        <a class='dropdown-item' href='generic.html'>Generic</a>
-								        <a class='dropdown-item' href='elements.html'>Elements</a>
-								      </div>
-								    </li>";
-                                    }
-                                    else {
-                                      echo" <li><a href='login.php'>Login</a></li>";
-                                    }
+									<?php
+                                    //if($_SESSION['login']==true){
+										//$username=$_SESSION['username'];
+										echo "<li class='dropdown'>
+										<a class='dropdown-toggle' href='#' id='navbardrop' data-toggle='dropdown'>
+										</a>
+										<div class='dropdown-menu'>
+										  <a class='dropdown-item' href='profile.php'>Profile</a>
+										  <a class='dropdown-item' href='logout.php'>Logout</a>
+										</div>
+									  </li>";
+                                    //}
+                                    //else {
+                                     // echo" <li><a href='login.php'>Login</a></li>";
+                                   // }
                                     ?>
 							    </ul>
 							  </div>						
