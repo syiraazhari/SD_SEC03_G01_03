@@ -21,7 +21,7 @@
 	</head>
 	<body>
 		<?php
-		include("db_conn.php")
+		include("login_config.php")
 		?>
 
 	<section class="section-gap">

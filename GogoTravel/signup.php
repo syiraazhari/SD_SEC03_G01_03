@@ -1,3 +1,9 @@
+<?php
+	include("config.php")
+	session_start();
+	
+?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -21,7 +27,20 @@
 	</head>
 	<body>
 		<?php
-		include("db_conn.php")
+		if(isset($_POST['signup'])){
+			$username = $_POST['username'];
+			$password = $_POST['password'];
+			$email = $_POST['email'];
+			$name = $_POST['name'];
+
+			$sql = "INSERT INTO user (name, username, password, email ) VALUES ('$name', '$username' , '$password', '$email')";
+			
+			if ($conn->query($sql)===true){
+				header("location:signin.php");
+			} else{
+				die(mysqli_error($conn));
+			}
+		}
 		?>
 
 	<section class="section-gap">
@@ -40,10 +59,10 @@
 			      			    <h3 class="mb-4">Sign Up</h3>
 			      		    </div>
 			      	    </div>
-					    <form class="signin-form" method="POST">
+					    <form action="signup.php" class="signin-form" method="POST">
                             <div class="form-group mb-3">
 			      			    <label class="label" for="name">Full Name</label>
-			      			    <input name="fullname" type="text" class="form-control" placeholder="Full Name as per NRIC" required>
+			      			    <input name="name" type="text" class="form-control" placeholder="Full Name as per NRIC" required>
 			      		    </div>
                             <div class="form-group mb-3">
 			      			    <label class="label" for="name">Date of Birth</label>
@@ -62,7 +81,7 @@
 			      			    <input name="email" type="email" class="form-control" placeholder="E-mail" required>
 			      		    </div>
 		                    <div class="form-group mb-3">
-		            	        <button type="submit" class="form-control btn btn-primary submit px-3">Next</button>
+		            	        <button name="signup" type="submit" class="form-control btn btn-primary submit px-3">Next</button>
 		                    </div>
 		                </form>	                
 		            </div>
