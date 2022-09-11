@@ -79,7 +79,7 @@ else if (isset($_POST['logout'])) {
 									  </li>";
                                     //}
                                     //else {
-                                     // echo" <li><a href='login.php'>Login</a></li>";
+                                     // echo" <li><a href='signin.php'>Login</a></li>";
                                    // }
                                     ?>
 							    </ul>

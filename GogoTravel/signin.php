@@ -28,7 +28,7 @@
 		<div class="container">
 			<div class="row d-flex justify-content-center" style="background-color: rgb(5, 5, 5);">
 				<div class="col-md-6 text-center mb-5">
-					<h2 class="heading-section" style="color : rgb(235, 226, 226)">Log-In</h2>
+					<h2 class="heading-section" style="color : rgb(235, 226, 226)">Sign-In</h2>
 				</div>
 			</div>
 			<div class="row d-flex justify-content-center" style="background-color: rgb(243, 245, 250);">
@@ -38,7 +38,7 @@
 							<div class="text w-100">
 								<h2>Welcome to Gogo Travel</h2>
 								<p>Don't have an account?</p>
-								<a href="#" class="btn btn-white btn-outline-white">Sign-Up</a>
+								<a href="signup.php" class="btn btn-white btn-outline-white">Sign-Up</a>
 							</div>
 			      </div>
 						<div class="login-wrap p-4 p-lg-5">
@@ -48,7 +48,7 @@
 			      		</div>
 						
 			      	</div>
-							<form action="#" class="signin-form" method="POST">
+							<form class="signin-form" method="POST">
 			      		<div class="form-group mb-3">
 			      			<label class="label" for="name">Username</label>
 			      			<input name="username" type="text" class="form-control" placeholder="Username" required>

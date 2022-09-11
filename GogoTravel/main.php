@@ -35,7 +35,7 @@
 										<h1 class="text-uppercase text-white">New Adventure</h1>
 										<p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod temp <br>
 										or incididunt ut labore et dolore magna aliqua. Ut enim ad minim.</p>
-										<a href="login.php" class="text-uppercase header-btn">Discover Now</a>
+										<a href="signin.php" class="text-uppercase header-btn">Discover Now</a>
 									</div>
 								</div>
 
@@ -52,7 +52,7 @@
 										<h1 class="text-uppercase text-white">New Trip</h1>
 										<p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod temp <br>
 										or incididunt ut labore et dolore magna aliqua. Ut enim ad minim.</p>
-										<a href="login.php" class="text-uppercase header-btn">Discover Now</a>
+										<a href="signin.php" class="text-uppercase header-btn">Discover Now</a>
 									</div>
 								</div>
 							</div>
@@ -68,7 +68,7 @@
 										<h1 class="text-uppercase text-white">New Experience</h1>
 										<p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod temp <br>
 										or incididunt ut labore et dolore magna aliqua. Ut enim ad minim.</p>
-										<a href="login.php" class="text-uppercase header-btn">Discover Now</a>
+										<a href="signin.php" class="text-uppercase header-btn">Discover Now</a>
 									</div>
 								</div>
 							</div>
