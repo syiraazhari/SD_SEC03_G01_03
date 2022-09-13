@@ -129,14 +129,14 @@
 			      			    <label class="label" for="name">Username</label>
 			      			    <input name="username" type="text" class="form-control" placeholder="Username" required>
 			      		    </div>
+							<div class="form-group mb-3">
+			      			    <label class="label" for="name">E-mail</label>
+			      			    <input name="email" type="email" class="form-control" placeholder="E-mail" required>
+			      		    </div>
 		                    <div class="form-group mb-3">
 		            	         <label class="label" for="password">Password</label>
 		                         <input name="password" type="password" class="form-control" placeholder="Password" required>
 		                    </div>
-                            <div class="form-group mb-3">
-			      			    <label class="label" for="name">E-mail</label>
-			      			    <input name="email" type="email" class="form-control" placeholder="E-mail" required>
-			      		    </div>
 		                    <div class="form-group mb-3">
 		            	        <button name="signup" type="submit" class="form-control btn btn-primary submit px-3">Next</button>
 		                    </div>
