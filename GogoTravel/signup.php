@@ -41,7 +41,7 @@
             $mail->Port = 587;
  
             //Recipients
-            $mail->setFrom('sdgroup1gogotravel@gmail.com', 'http://localhost/SD_SEC03_G01_03-1/GogoTravel/main.php');
+            $mail->setFrom('sdgroup1gogotravel@gmail.com', 'Gogo Travel');
  
             //Add a recipient
             $mail->addAddress($email, $name);
