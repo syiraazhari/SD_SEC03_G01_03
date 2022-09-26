@@ -1,32 +1,8 @@
-<?php
-session_start();
-include("login_config.php");
-if(isset($_POST['login'])) {
-  $email = $_POST['email'];  
-  $password = $_POST['password'];
-  //to prevent from mysqli injection  
-  if($email === "Admin@gmail.com" && $password === "123") {
-    $_SESSION['email'] = $email;
-  } else {
-    $email= stripcslashes($email);
-    $password = stripcslashes($password);
-    $email = mysqli_real_escape_string($conn, $email);
-    $password = mysqli_real_escape_string($conn, $password);
-    $sql = "select * from user where email = '$email' and password = '$password'";
-    $result = mysqli_query($conn, $sql);
-    $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
-    $count = mysqli_num_rows($result);
-  
-    if($count == 1){
-      $_SESSION['email'] = $email;
-      $_SESSION['id'] = $row['id'];
-    }
-  }
-} 
-else if (isset($_POST['logout'])) {
-  session_destroy();
-  session_start();
-}
+<?php 
+  session_start(); 
+  include 'login_config.php';
+  $id = $_SESSION['id'];
+  $username = $_SESSION['username'];
 ?>
 
 <link rel="shortcut icon" href="img/fav.png">

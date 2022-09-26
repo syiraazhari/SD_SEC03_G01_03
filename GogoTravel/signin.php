@@ -21,6 +21,7 @@
 	</head>
 	<body>
 		<?php
+		session_start();
 		include("login_config.php")
 		?>
 
@@ -28,7 +29,7 @@
 		<div class="container">
 			<div class="row d-flex justify-content-center" style="background-color: rgb(5, 5, 5);">
 				<div class="col-md-6 text-center mb-5">
-					<h2 class="heading-section" style="color : rgb(235, 226, 226)">Sign-In</h2>
+					<h2 class="heading-section" style="color : rgb(235, 226, 226)"> <br> Sign-In</h2>
 				</div>
 			</div>
 			<div class="row d-flex justify-content-center" style="background-color: rgb(243, 245, 250);">
@@ -68,7 +69,7 @@
 										</label>
 									</div>
 									<div class="w-50 text-md-right">
-										<a href="#">Forgot Password</a>
+										<a href="forgotpass.php" name="forgotpass">Forgot Password</a>
 									</div>
 		            </div>
 		          </form>

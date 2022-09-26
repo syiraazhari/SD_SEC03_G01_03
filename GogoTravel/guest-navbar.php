@@ -1,11 +1,3 @@
-<?php 
-  session_start(); 
-  include 'login_config.php';
-  @$id = $_SESSION['id'];
-  @$username = $_SESSION['username'];
-?>
-
-
 <link rel="shortcut icon" href="img/fav.png">
 		<meta charset="UTF-8">
 		<title>Gogo Travel</title>
@@ -47,18 +39,17 @@
 									<!-- Dropdown -->
                                     
                                     <?php
-									if (isset($username)){
 										echo "<li class='dropdown'>
 										<a class='dropdown-toggle' href='#' id='navbardrop' data-toggle='dropdown'>$username</a>
 										<div class='dropdown-menu'>
-										  <a class='dropdown-item' href='profileview.php'>Profile</a>
+										  <a class='dropdown-item' href='profile2.php'>Profile</a>
 										  <a class='dropdown-item' href='logout.php'>Logout</a>
 										</div>
 									  </li>";
-									}
-                                    else {
-                                     echo" <li><a href='signin.php'>Sign In</a></li>";
-									}
+                                    //}
+                                    //else {
+                                     // echo" <li><a href='signin.php'>Login</a></li>";
+                                    
                                     ?>
 							    </ul>
 							  </div>						

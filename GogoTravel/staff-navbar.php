@@ -1,32 +1,14 @@
-<?php
-session_start();
-include("login_config.php");
-if(isset($_POST['login'])) {
-  $email = $_POST['email'];  
-  $password = $_POST['password'];
-  //to prevent from mysqli injection  
-  if($email === "Admin@gmail.com" && $password === "123") {
-    $_SESSION['email'] = $email;
-  } else {
-    $email= stripcslashes($email);
-    $password = stripcslashes($password);
-    $email = mysqli_real_escape_string($conn, $email);
-    $password = mysqli_real_escape_string($conn, $password);
-    $sql = "select * from user where email = '$email' and password = '$password'";
-    $result = mysqli_query($conn, $sql);
-    $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
-    $count = mysqli_num_rows($result);
-  
-    if($count == 1){
-      $_SESSION['email'] = $email;
-      $_SESSION['id'] = $row['id'];
-    }
+<?php 
+  session_start(); 
+  if (!isset($_SESSION['id'])) {
+    $_SESSION['msg'] = "You must log in first";
+    header('location: signin.php');
   }
-} 
-else if (isset($_POST['logout'])) {
-  session_destroy();
-  session_start();
-}
+  if (isset($_GET['logout'])) {
+    session_destroy();
+    unset($_SESSION['user_id']);
+    header("location: signin.php");
+  }
 ?>
 
 <link rel="shortcut icon" href="img/fav.png">

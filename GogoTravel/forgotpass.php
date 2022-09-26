@@ -6,7 +6,7 @@
 
 	require 'vendor/autoload.php';
 
-	if(isset($_POST['signup'])){
+	if(isset($_POST['forgotpass'])){
 		$username = $_POST['username'];
 		$password = $_POST['password'];
 		$email = $_POST['email'];
@@ -61,10 +61,10 @@
             $conn = mysqli_connect("localhost", "root", "", "sd_g01_03");
 	
 
-			$sql = "INSERT INTO user (name, username, password, email, verification_code) VALUES ('$name', '$username' , '$password', '$email', '$verification_code')";
+			$sql = "INSERT INTO user WHERE email VALUES ('$email')";
 			
 			if ($conn->query($sql)===true){
-				header("location:email-verification.php");
+				header("location:resetpass.php");
 			} else{
 				die(mysqli_error($conn));
 			}
@@ -80,7 +80,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-  	<title>Sign Up</title>
+  	<title>Forgotten Password</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -104,7 +104,7 @@
 		<div class="container col-lg-3">
 			<div class="row d-flex justify-content-center" style="background-color: rgb(5, 5, 5);">
 				<div class="col-md-6 text-center mb-3 align-items-center">
-					<h2 class="heading-section" style="color : rgb(235, 226, 226)">Create An Account</h2>
+					<h2 class="heading-section" style="color : rgb(235, 226, 226)">Password Reset</h2>
 				</div>
 			</div>
 			<div class="row d-flex justify-content-center" style="background-color: rgb(243, 245, 250);">
@@ -113,32 +113,16 @@
 					<div class="login-wrap p-4 p-lg-5">
 			            <div class="d-flex align-items-center">
 			      		    <div class="w-100">
-			      			    <h3 class="mb-4">Sign Up</h3>
+			      			    <h3 class="mb-4">Enter your e-mail</h3>
 			      		    </div>
 			      	    </div>
-					    <form action="signup.php" class="signin-form" method="POST">
-                            <div class="form-group mb-3">
-			      			    <label class="label" for="name">Full Name</label>
-			      			    <input name="name" type="text" class="form-control" placeholder="Full Name as per NRIC" required>
-			      		    </div>
-                            <div class="form-group mb-3">
-			      			    <label class="label" for="name">Date of Birth</label>
-			      			    <input name="dob" type="date" class="form-control" placeholder="D.O.B" required>
-			      		    </div>
-			      		    <div class="form-group mb-3">
-			      			    <label class="label" for="name">Username</label>
-			      			    <input name="username" type="text" class="form-control" placeholder="Username" required>
-			      		    </div>
+					    <form action="forgotpass.php" class="signin-form" method="POST">
 							<div class="form-group mb-3">
 			      			    <label class="label" for="name">E-mail</label>
 			      			    <input name="email" type="email" class="form-control" placeholder="E-mail" required>
 			      		    </div>
 		                    <div class="form-group mb-3">
-		            	         <label class="label" for="password">Password</label>
-		                         <input name="password" type="password" class="form-control" placeholder="Password" required>
-		                    </div>
-		                    <div class="form-group mb-3">
-		            	        <button name="signup" type="submit" class="form-control btn btn-primary submit px-3">Next</button>
+		            	        <button name="forgotpass" type="submit" class="form-control btn btn-primary submit px-3">Next</button>
 		                    </div>
 		                </form>	                
 		            </div>
