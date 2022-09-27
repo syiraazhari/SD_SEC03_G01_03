@@ -29,6 +29,7 @@
         $_SESSION['email'] = $row['email'];
         $_SESSION['password'] = $row['password'];
         $_SESSION['id'] = $row['id'];
+        $_SESSION['dob'] = $row['dob'];
         header("location:main.php");
       }
 
@@ -40,6 +41,7 @@
         $_SESSION['email'] = $row['email'];
         $_SESSION['password'] = $row['password'];
         $_SESSION['id'] = $row['id'];
+        $_SESSION['dob'] = $row['dob'];
         header("location:staffdash.php");
       }
 
@@ -51,6 +53,7 @@
         $_SESSION['email'] = $row['email'];
         $_SESSION['password'] = $row['password'];
         $_SESSION['id'] = $row['id'];
+        $_SESSION['dob'] = $row['dob'];
         header("location:admin/admindash.php");
       }
       else 

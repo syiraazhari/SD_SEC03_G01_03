@@ -210,6 +210,15 @@ td, th {
   font-size: 18px;
 }
 
+.fz-20 {
+  font-size: 20px;
+}
+
+.fz-24 {
+  font-size: 24px;
+}
+
+
 .fz-30 {
   font-size: 30px;
 }
@@ -240,6 +249,14 @@ td, th {
 
 .fsi {
   font-style: italic;
+}
+
+.mt-1 {
+  margin-top: 1px;
+}
+
+.mt-5 {
+  margin-top: 5px;
 }
 
 .mt-10 {

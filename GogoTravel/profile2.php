@@ -81,7 +81,7 @@ if(isset($_POST['update'])){
 
         <!-- Start Align Area -->
         <div class="whole-wrap">
-            <div class="container col-lg-15">
+            <div class="container col-lg-4">
                 <div class="section-top-border">
                     <div class="row">
                         <div class="col-lg-10 col-md-10">

@@ -81,9 +81,9 @@ if(isset($_POST['update'])){
 
         <!-- Start Align Area -->
         <div class="whole-wrap">
-            <div class="container col-lg-15">
+            <div class="container col-lg-4">
                 <div class="section-top-border">
-                    <div class="row">
+                    <div class="row" style="background-color: rgb(220,220,220);">  <!-- start of profile info -->
                         <div class="col-lg-10 col-md-15">
                             <?php
                                 $select = mysqli_query($conn, "SELECT * FROM `user` WHERE id = '$id'") or die('query failed');
@@ -91,7 +91,7 @@ if(isset($_POST['update'])){
                                     $fetch = mysqli_fetch_assoc($select);
                                 }
                             ?>
-                            <h3 class="mb-30">My Profile</h3>
+                            <h2 class="mb-30" style="background-color: rgb(169,169,169)">My Profile</h2>
 
                             <div class="col-md-3">
                                 <div class="text-center">
@@ -110,23 +110,27 @@ if(isset($_POST['update'])){
                             <!-- edit form column -->
 
                             <form action="login_config.php" method="POST">
-                                <div class="col-lg-10 col-md-12 mt-50 ">
-                                    <label class="col-md-3">Full Name: <?php echo $fetch['name']; ?></label>
+                                <div class="col-lg-12 col-md-12 mt-20">
+                                    <p class=fz-18>Full Name: <?php echo $fetch['name']; ?></p>
                                 </div>
                                 <br>
-                                <div class="col-lg-10 col-md-12 mt-12  ">
-                                    <label class="col-md-3">Username: <?php echo $fetch['username']; ?></label></label>
+                                <div class="col-lg-10 col-md-12 mt-1">
+                                    <p class=fz-18>Username: <?php echo $fetch['username']; ?></p>
                                 </div>
                                 <br>
-                                <div class="col-lg-10 col-md-12 mt-12 ">
-                                    <label class="col-md-3">E-mail: <?php echo $fetch['email']; ?></label>
+                                <div class="col-lg-10 col-md-12 mt-1">
+                                    <p class=fz-18>E-mail: <?php echo $fetch['email']; ?></p>
                                 </div>
                                 <br>
+                                <div class="col-lg-10 col-md-12 mt-1">
+                                    <p class=fz-18>Date of Birth: <?php echo $fetch['dob']; ?></p>
+                                </div>
                             
                                 <br>            
                                     <label class="col-md-3"></label>
                                 <div class="col-md-8">
-                                    <a href="profile2.php">Edit Profile</a>
+                                    <a href="profile2.php">Edit Profile <br></a>
+                                    <br>
                                     <span></span>
                                 </div>
                             </form>

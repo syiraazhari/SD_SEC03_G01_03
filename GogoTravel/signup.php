@@ -122,7 +122,7 @@
 			      			    <input name="name" type="text" class="form-control" placeholder="Full Name as per NRIC" required>
 			      		    </div>
                             <div class="form-group mb-3">
-			      			    <label class="label" for="name">Date of Birth</label>
+			      			    <label class="label" for="date">Date of Birth</label>
 			      			    <input name="dob" type="date" class="form-control" placeholder="D.O.B" required>
 			      		    </div>
 			      		    <div class="form-group mb-3">
@@ -130,7 +130,7 @@
 			      			    <input name="username" type="text" class="form-control" placeholder="Username" required>
 			      		    </div>
 							<div class="form-group mb-3">
-			      			    <label class="label" for="name">E-mail</label>
+			      			    <label class="label" for="email">E-mail</label>
 			      			    <input name="email" type="email" class="form-control" placeholder="E-mail" required>
 			      		    </div>
 		                    <div class="form-group mb-3">
