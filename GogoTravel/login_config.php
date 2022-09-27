@@ -25,11 +25,11 @@
       {
         $_SESSION['login']=true;
         $_SESSION['name'] = $row['name'];
+        $_SESSION['dob'] = $row['dob'];
         $_SESSION['username'] = $row['username'];
         $_SESSION['email'] = $row['email'];
         $_SESSION['password'] = $row['password'];
         $_SESSION['id'] = $row['id'];
-        $_SESSION['dob'] = $row['dob'];
         header("location:main.php");
       }
 
@@ -37,11 +37,11 @@
       {
         $_SESSION['login']=true;
         $_SESSION['name'] = $row['name'];
+        $_SESSION['dob'] = $row['dob'];
         $_SESSION['username'] = $row['username'];
         $_SESSION['email'] = $row['email'];
         $_SESSION['password'] = $row['password'];
         $_SESSION['id'] = $row['id'];
-        $_SESSION['dob'] = $row['dob'];
         header("location:staffdash.php");
       }
 
@@ -49,11 +49,11 @@
       {
         $_SESSION['login']=true;
         $_SESSION['name'] = $row['name'];
+        $_SESSION['dob'] = $row['dob'];
         $_SESSION['username'] = $row['username'];
         $_SESSION['email'] = $row['email'];
         $_SESSION['password'] = $row['password'];
         $_SESSION['id'] = $row['id'];
-        $_SESSION['dob'] = $row['dob'];
         header("location:admin/admindash.php");
       }
       else 

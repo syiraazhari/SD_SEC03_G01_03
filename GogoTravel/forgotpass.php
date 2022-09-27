@@ -7,10 +7,7 @@
 	require 'vendor/autoload.php';
 
 	if(isset($_POST['forgotpass'])){
-		$username = $_POST['username'];
-		$password = $_POST['password'];
 		$email = $_POST['email'];
-		$name = $_POST['name'];
 
 		//Instantiation and passing `true` enables exceptions
         $mail = new PHPMailer(true);
@@ -44,15 +41,15 @@
             $mail->setFrom('sdgroup1gogotravel@gmail.com', 'Gogo Travel');
  
             //Add a recipient
-            $mail->addAddress($email, $name);
+            $mail->addAddress($email);
  
             //Set email format to HTML
             $mail->isHTML(true);
  
             $verification_code = substr(number_format(time() * rand(), 0, '', ''), 0, 6);
  
-            $mail->Subject = 'Email verification';
-            $mail->Body    = '<p>Your verification code is: <b style="font-size: 30px;">' . $verification_code . '</b></p>';
+            $mail->Subject = 'Password Reset';
+            $mail->Body    = '<p>Your password reset code is: <b style="font-size: 30px;">' . $verification_code . '</b></p>';
  
             $mail->send();
             // echo 'Message has been sent';
@@ -61,7 +58,7 @@
             $conn = mysqli_connect("localhost", "root", "", "sd_g01_03");
 	
 
-			$sql = "INSERT INTO user WHERE email VALUES ('$email')";
+			$sql = "INSERT INTO user (name, username, password, email, verification_code) VALUES ('$name', '$username' , '$password', '$email', '$verification_code')";
 			
 			if ($conn->query($sql)===true){
 				header("location:resetpass.php");
