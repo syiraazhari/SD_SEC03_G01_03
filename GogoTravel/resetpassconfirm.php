@@ -23,29 +23,17 @@
 <?php
     include 'config.php';
     
-    // verify email
-    if (isset($_POST["verify_email"]))
-    {
-        $email = $_POST["email"];
-        $_SESSION['email'] = $email;
-        $newverification_code = $_POST["verification_code"];
- 
-        // connect with database
-        $conn = mysqli_connect("localhost", "root", "", "sd_g01_03");
- 
-        // mark email as verified
-        $sql = "UPDATE user SET email_verified_at = NOW() WHERE email = '" . $email . "' AND verification_code = '" . $verification_code . "'";
-        $result  = mysqli_query($conn, $sql);
- 
-        if (mysqli_affected_rows($conn) == 0)
-        {
-            header("location:resetpassconfirm.php");
-        }else
- 
-        echo "<p>You can login now.</p>";
-        exit();
-    }
+    if(isset($_POST['change_password'])){
 
+            $email = $_SESSION["email"];
+            $cpassword = mysqli_real_escape_string($conn, $_POST['cpassword']);
+
+            mysqli_query($conn, "UPDATE user SET password = '$cpassword' WHERE email = 'benlccop123@gmail.com'");
+            
+            header("location:signin.php");
+        
+    }
+ 
 ?>
 	<section class="section-gap">
 		<div class="container col-lg-4 ">
@@ -56,24 +44,24 @@
 				</div>
 			</div>
                 <div class="row d-flex justify-content-center" style="background-color: rgb(243, 245, 250);">
-                    <div class="col-md-12 col-lg-7">
-                        <form class="verification-form" method="POST">
-                                <div class="form-group mb-4">  
+                    <div>
+                        <form class="change_password" method="POST">
+                                <div class="form-group mb-3">
+                                    <br>
+                                    <label class="label" for="name">New Password</label>
+                                    <input name="password" type="password" class="form-control" placeholder="New Password" required>
                                 </div>
                                 <div class="form-group mb-3">
-                                    <p class=fz-18 for="text">We have sent a verification code to your email for password reset.</p>
-                                </div>
-                                <div class="form-group mb-3">
-                                    <label class="label" for="text">6-Digit Code</label>
-                                    <input type="text" name="verification_code" placeholder="Enter verification code" required />
+                                    <label class="label" for="date">Confirm Password</label>
+                                    <input name="cpassword" type="password" class="form-control" placeholder="Confirm Password" required>
                                 </div>
                                 <div class="row d-flex justify-content-center">
                                     <div class="form-group col-md-12 col-lg-7">
-                                        <button name="verify_email" value="Verify Email" type="submit" class="form-control btn btn-primary submit px-3">Verify</button>
+                                        <button name="change_password" value="Change" type="submit" class="form-control btn btn-primary submit px-3">Verify</button>
                                     </div>
                                 </div>
-                        </form>
-                    </div>
+                        </form>	   
+                    </div>    
                 </div>
 		</div>
 	</section>

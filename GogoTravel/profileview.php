@@ -121,12 +121,7 @@ if(isset($_POST['update'])){
                                 <div class="col-lg-10 col-md-12 mt-1">
                                     <p class=fz-18>E-mail: <?php echo $fetch['email']; ?></p>
                                 </div>
-                                <br>
-                                <div class="col-lg-10 col-md-12 mt-1">
-                                    <p class=fz-18>Date of Birth: <?php echo $fetch['dob']; ?></p>
-                                </div>
-                            
-                                <br>            
+                                <br>           
                                     <label class="col-md-3"></label>
                                 <div class="col-md-8">
                                     <a href="profile2.php">Edit Profile <br></a>
