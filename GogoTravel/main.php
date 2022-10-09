@@ -31,10 +31,11 @@
 							<div class="row fullscreen justify-content-center align-items-center">
 								<div class="col-md-10 col-12">
 									<div class="banner-content text-center">
-										<h4 class="text-white mb-20 text-uppercase">Discover the Colorful World</h4>
-										<h1 class="text-uppercase text-white">New Adventure</h1>
-										<p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod temp <br>
-										or incididunt ut labore et dolore magna aliqua. Ut enim ad minim.</p>
+										<h4 class="text-white mb-20 text-uppercase">Discover the Wonderful Geopark of Langkawi</h4>
+										<h1 class="text-uppercase text-white">Now only from RM699 for 4pax</h1>
+										<p class="text-white">The Langkawi Geopark is the honorific moniker of the Langkawi archipelago in its entirety. <br>
+										That's right, all 99 islands (104 at low tide). And depending on which social circles you run in, <br>
+										Langkawi UNESCO Global Geopark would be the 'official' title claim. </p>
 										<a href="signin.php" class="text-uppercase header-btn">Discover Now</a>
 									</div>
 								</div>
@@ -48,10 +49,11 @@
 							<div class="row fullscreen justify-content-center align-items-center">
 								<div class="col-md-10 col-12">
 									<div class="banner-content text-center">
-										<h4 class="text-white mb-20 text-uppercase">Discover the Colorful World</h4>
-										<h1 class="text-uppercase text-white">New Trip</h1>
-										<p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod temp <br>
-										or incididunt ut labore et dolore magna aliqua. Ut enim ad minim.</p>
+										<h4 class="text-white mb-20 text-uppercase">Discover the Beautiful Rainforest of Borneo</h4>
+										<h1 class="text-uppercase text-white">Starting from RM599</h1>
+										<p class="text-white">Borneo, a giant, rugged island in Southeast Asia’s Malay <br>
+										Archipelago, is shared by the Malaysian states of Sabah and <br>
+										Sarawak, Indonesian Kalimantan and the tiny nation of Brunei.</p>
 										<a href="signin.php" class="text-uppercase header-btn">Discover Now</a>
 									</div>
 								</div>
@@ -64,10 +66,11 @@
 							<div class="row fullscreen justify-content-center align-items-center">
 								<div class="col-md-10 col-12">
 									<div class="banner-content text-center">
-										<h4 class="text-white mb-20 text-uppercase">Discover the Colorful World</h4>
-										<h1 class="text-uppercase text-white">New Experience</h1>
-										<p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod temp <br>
-										or incididunt ut labore et dolore magna aliqua. Ut enim ad minim.</p>
+										<h4 class="text-white mb-20 text-uppercase">Discover the Capital of Malaysia</h4>
+										<h1 class="text-uppercase text-white">RM1k for 4d3n</h1>
+										<p class="text-white">Malaysia's capital and largest city has much to offer travelers. Perhaps best known for the <br>
+										Petronas Twin Towers (the world's tallest twin towers), KL is a very popular tourist <br>
+										destination and routinely makes the list of top 10 most visited cities in the world.</p>
 										<a href="signin.php" class="text-uppercase header-btn">Discover Now</a>
 									</div>
 								</div>

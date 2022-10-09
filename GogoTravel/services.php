@@ -31,46 +31,46 @@
                 <div class="row d-flex justify-content-center">
                     <div class="menu-content pb-30 col-lg-8">
                         <div class="title text-center">
-                            <h1 class="mb-10">Latest Project on the go</h1>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <br> labore  et dolore magna aliqua.</p>
+                            <h1 class="mb-10">Travel Packages on the go</h1>
+                            <p>Below are dedicated travel packages with one of the cheapest rates <br> you can find around town.</p>
                         </div>
                     </div>
                 </div>						
                 <div class="row justify-content-center d-flex">
                     <div class="active-works-carousel mt-40 col-lg-8">
                         <div class="item">
-                            <img class="img-fluid" src="img/why.jpg" alt="">
+                            <img class="img-fluid" src="img/unesco.jpg" alt="">
                             <div class="caption text-center mt-20">
-                                <h6 class="text-uppercase">Vector Illustration</h6>
-                                <p>LCD screens are uniquely modern in style, and the liquid crystals that make them work have <br> allowed humanity to create slimmer, more portable technology.</p>
+                                <h6 class="text-uppercase">UNESCO World Heritage</h6>
+                                <p> Dive deep into these UNESCO lablled spots such as Langkawi Geopark and Gunung Mulu<br> 
+                                National Park. Remarkably rocky, tremendously old, and a theater for eye-popping natural spectacles are just one click away.</p>
                             </div>
                         </div>
                         <div class="item">
-                            <img class="img-fluid" src="img/why.jpg" alt="">
+                            <img class="img-fluid" src="img/city.jpg" alt="">
                             <div class="caption text-center mt-20">
-                                <h6 class="text-uppercase">Vector Illustration</h6>
-                                <p>LCD screens are uniquely modern in style, and the liquid crystals that make them work have <br> allowed humanity to create slimmer, more portable technology.</p>
+                                <h6 class="text-uppercase">City Lights</h6>
+                                <p>Malaysia’s city swagger comes accompanied by nature and history, courtesy of <br> 
+                                time-worn temples, kopitiam (traditional coffee houses), and rainforests <br> 
+                                almost side by side with high-rise buildings.</p>
                             </div>
                         </div>
                         <div class="item">
-                            <img class="img-fluid" src="img/why.jpg" alt="">
+                            <img class="img-fluid" src="img/histrorical.jpg" alt="">
                             <div class="caption text-center mt-20">
-                                <h6 class="text-uppercase">Vector Illustration</h6>
-                                <p>LCD screens are uniquely modern in style, and the liquid crystals that make them work have <br> allowed humanity to create slimmer, more portable technology.</p>
+                                <h6 class="text-uppercase">Historical Architectures</h6>
+                                <p>Imagine a fascinating confluence of ancient Chinese, Indian and South Asian Muslim cultures, <br> 
+                                liberally sprinkled with colonial influence! Our destination experts have traveled high and low <br>
+                                in search of unique experiences to bring a slice of authentic history and incredible heritage to your Enchanting Travels tour.</p>
                             </div>
                         </div>
                         <div class="item">
-                            <img class="img-fluid" src="img/why.jpg" alt="">
+                            <img class="img-fluid" src="img/islandhopping.jpg" alt="">
                             <div class="caption text-center mt-20">
-                                <h6 class="text-uppercase">Vector Illustration</h6>
-                                <p>LCD screens are uniquely modern in style, and the liquid crystals that make them work have <br> allowed humanity to create slimmer, more portable technology.</p>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <img class="img-fluid" src="img/why.jpg" alt="">
-                            <div class="caption text-center mt-20">
-                                <h6 class="text-uppercase">Vector Illustration</h6>
-                                <p>LCD screens are uniquely modern in style, and the liquid crystals that make them work have <br> allowed humanity to create slimmer, more portable technology.</p>
+                                <h6 class="text-uppercase">Island Hopping</h6>
+                                <p>Both sides of Malaysia have soft sandy beaches and snorkel-worthy coves, <br> 
+                                from beautiful beaches with great waves to rushing rivers, you can indulge in the best of <br>
+                                adventurous water sports in Malaysia that your heart desires of.</p>
                             </div>
                         </div>
                     </div>
@@ -86,8 +86,8 @@
                 <div class="row d-flex justify-content-center">
                     <div class="menu-content pb-60 col-lg-8">
                         <div class="title text-center">
-                            <h1 class="mb-10">Some Features that Made us Unique</h1>
-                            <p>Who are in extremely love with eco friendly system.</p>
+                            <h1 class="mb-10">Highly recommended travel packages</h1>
+                            <p>Below are the few best selling travel packages to date.</p>
                         </div>
                     </div>
                 </div>						
@@ -95,8 +95,8 @@
                     <div class="col-lg-4 col-md-6 ">
                         <div class="single-feature mb-30">
                             <div class="title d-flex flex-row pb-20">
-                                <span class="lnr lnr-user"></span>
-                                <h4><a href="#">Expert Technicians</a></h4>
+                                <span class="lnr lnr-license"></span>
+                                <h4><a href="#">2D1N Pulau Pangkor <br> *RM299* </a></h4>
                             </div>
                             <p>
                                 Usage of the Internet is becoming more common due to rapid advancement of technology and power.
@@ -107,7 +107,7 @@
                         <div class="single-feature mb-30">
                             <div class="title d-flex flex-row pb-20">
                                 <span class="lnr lnr-license"></span>
-                                <h4><a href="#">Professional Service</a></h4>
+                                <h4><a href="#">4D3N Kuantan Trip <br> *RM599*</a></h4>
                             </div>
                             <p>
                                 Usage of the Internet is becoming more common due to rapid advancement of technology and power.
@@ -117,8 +117,8 @@
                     <div class="col-lg-4 col-md-6 ">
                         <div class="single-feature mb-30">
                             <div class="title d-flex flex-row pb-20">
-                                <span class="lnr lnr-phone"></span>
-                                <h4><a href="#">Great Support</a></h4>
+                                <span class="lnr lnr-license"></span>
+                                <h4><a href="#">5D4N Sabah Trip <br> *RM999*</a></h4>
                             </div>
                             <p>
                                 Usage of the Internet is becoming more common due to rapid advancement of technology and power.
@@ -128,8 +128,8 @@
                     <div class="col-lg-4 col-md-6 ">
                         <div class="single-feature">
                             <div class="title d-flex flex-row pb-20">
-                                <span class="lnr lnr-rocket"></span>
-                                <h4><a href="#">Technical Skills</a></h4>
+                                <span class="lnr lnr-license"></span>
+                                <h4><a href="#">3D2N Kuala Lumpur <br> *RM599*</a></h4>
                             </div>
                             <p>
                                 Usage of the Internet is becoming more common due to rapid advancement of technology and power.
@@ -139,8 +139,8 @@
                     <div class="col-lg-4 col-md-6 ">
                         <div class="single-feature">
                             <div class="title d-flex flex-row pb-20">
-                                <span class="lnr lnr-diamond"></span>
-                                <h4><a href="#">Highly Recomended</a></h4>
+                                <span class="lnr lnr-license"></span>
+                                <h4><a href="#">2D1N Perhentian Camp <br> *RM299*</a></h4>
                             </div>
                             <p>
                                 Usage of the Internet is becoming more common due to rapid advancement of technology and power.
@@ -150,8 +150,8 @@
                     <div class="col-lg-4 col-md-6 ">
                         <div class="single-feature">
                             <div class="title d-flex flex-row pb-20">
-                                <span class="lnr lnr-bubble"></span>
-                                <h4><a href="#">Positive Reviews</a></h4>
+                                <span class="lnr lnr-license"></span>
+                                <h4><a href="#">4D3N Langkawi Trip <br> *RM699*</a></h4>
                             </div>
                             <p>
                                 Usage of the Internet is becoming more common due to rapid advancement of technology and power.
