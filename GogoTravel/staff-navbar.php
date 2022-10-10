@@ -44,7 +44,7 @@
 							  <div class="collapse navbar-collapse justify-content-end align-items-center" id="navbarSupportedContent">
 							    <ul class="navbar-nav">				
 									<li><a href="admin-services.php">Service</a></li>
-									<li><a href="staffcont.php">Users</a></li>	
+									<li><a href="view_users.php">Users</a></li>	
 									<!-- Dropdown -->
                                     
 									<?php

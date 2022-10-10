@@ -39,7 +39,7 @@
 							    <ul class="navbar-nav">				
 									<li><a href="admin-services.php">Service</a></li>
 									<li><a href="staffcont.php">Staff</a></li>
-									<li><a href="#">User</a></li>	
+									<li><a href="view_users.php">User</a></li>	
 									<!-- Dropdown -->
                                     
 									<?php
