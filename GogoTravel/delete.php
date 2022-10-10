@@ -1,9 +1,9 @@
 <?php  
 
-    include("database/db_conection.php");  
+    include 'config.php';  
     $delete_id=$_GET['del'];  
-    $delete_query="delete  from users WHERE id='$delete_id'";//delete query  
-    $run=mysqli_query($dbcon,$delete_query);  
+    $delete_query="DELETE FROM user WHERE id='$delete_id'";
+    $run=mysqli_query($conn,$delete_query);
     
     if($run)  
     {  

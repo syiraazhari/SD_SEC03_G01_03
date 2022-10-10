@@ -1,9 +1,14 @@
+<?php
+include 'staff-navbar.php';
+?>
+
+<!DOCTYPE html>
 <html>  
 <head lang="en">  
     <meta charset="UTF-8">  
-    <link type="text/css" rel="stylesheet" href="bootstrap-3.2.0-dist\css\bootstrap.css"> <!--css file link in bootstrap folder-->  
+    <link type="text/css" rel="stylesheet" href="bootstrap-3.2.0-dist\css\bootstrap.css">
     <title>View Users</title>  
-</head>  
+</head>
 <style>  
     .login-panel {  
         margin-top: 150px;  
@@ -18,7 +23,7 @@
 <div class="table-scrol">  
     <h1 align="center">All the Users</h1>  
   
-<div class="table-responsive"><!--this is used for responsive display in mobile and other devices-->  
+<div class="table-responsive">
     <table class="table table-bordered table-hover table-striped" style="table-layout: fixed">  
         <thead>  
   
@@ -26,40 +31,38 @@
   
             <th>User Id</th>  
             <th>User Name</th>  
-            <th>User E-mail</th>  
-            <th>User Pass</th>  
+            <th>User Password</th>  
+            <th>User Email</th>  
             <th>Delete User</th>  
         </tr>  
-        </thead>  
-  
+        </thead>
+
         <?php  
-        include("database/db_conection.php");  
-        $view_users_query="select * from users";//select query for viewing users.  
-        $run=mysqli_query($dbcon,$view_users_query);//here run the sql query.  
-  
-        while($row=mysqli_fetch_array($run))//while look to fetch the result and store in a array $row.  
+          
+        include 'config.php';
+        $sql = "SELECT * FROM user";
+        $result = mysqli_query($conn, $sql);
+
+        while($row=mysqli_fetch_array($result))
         {  
             $user_id=$row[0];  
-            $user_name=$row[1];  
-            $user_email=$row[2];  
-            $user_pass=$row[3];  
-  
-        ?>  
-  
-        <tr>  
-<!--here showing results in the table -->  
+            $user_username=$row[1];  
+            $user_password=$row[2];  
+            $user_email=$row[3];  
+        
+        ?>
+    
+        <tr>
             <td><?php echo $user_id;  ?></td>  
-            <td><?php echo $user_name;  ?></td>  
+            <td><?php echo $user_username;  ?></td>  
+            <td><?php echo $user_password;  ?></td>  
             <td><?php echo $user_email;  ?></td>  
-            <td><?php echo $user_pass;  ?></td>  
             <td><a href="delete.php?del=<?php echo $user_id ?>"><button class="btn btn-danger">Delete</button></a></td> <!--btn btn-danger is a bootstrap button to show danger-->  
-        </tr>  
-  
-        <?php } ?>  
-  
-    </table>  
-        </div>  
-</div>  
-</body>  
-  
-</html>  
+        </tr>
+    <?php } ?>
+    </table>
+    </div>
+</div>
+</body>
+ 
+</html>
