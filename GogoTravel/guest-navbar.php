@@ -31,7 +31,7 @@
 							  <div class="collapse navbar-collapse justify-content-end align-items-center" id="navbarSupportedContent">
 							    <ul class="navbar-nav">
 									<li><a href="main.php">Home</a></li>				
-									<li><a href="services.php">Service</a></li>
+									<li><a href="packages.php">Service</a></li>
 									<li><a href="gallery.php">Gallery</a></li>
 									<li><a href="about.php">About</a></li>	
 									<li><a href="faq.php">Faq</a></li>

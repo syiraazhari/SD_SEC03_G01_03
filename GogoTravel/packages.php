@@ -4,7 +4,7 @@
 
     <link rel="shortcut icon" href="img/fav.png">
     <meta charset="UTF-8">
-    <title>Adventure</title>
+    <title>Packages</title>
 
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet"> 
         <!--

@@ -39,7 +39,7 @@
 							  <div class="collapse navbar-collapse justify-content-end align-items-center" id="navbarSupportedContent">
 							    <ul class="navbar-nav">
 									<li><a href="main.php">Home</a></li>				
-									<li><a href="services.php">Service</a></li>
+									<li><a href="packages.php">Packages</a></li>
 									<li><a href="gallery.php">Gallery</a></li>
 									<li><a href="about.php">About</a></li>	
 									<li><a href="faq.php">Faq</a></li>
@@ -52,6 +52,7 @@
 										<a class='dropdown-toggle' href='#' id='navbardrop' data-toggle='dropdown'>$username</a>
 										<div class='dropdown-menu'>
 										  <a class='dropdown-item' href='profileview.php'>Profile</a>
+										  <a class='dropdown-item' href='#'>Bookings</a>
 										  <a class='dropdown-item' href='logout.php'>Logout</a>
 										</div>
 									  </li>";

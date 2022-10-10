@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 13, 2022 at 07:01 PM
+-- Generation Time: Oct 09, 2022 at 02:32 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.2
 
@@ -30,6 +30,7 @@ SET time_zone = "+00:00";
 CREATE TABLE `user` (
   `id` int(11) NOT NULL,
   `username` varchar(30) NOT NULL,
+  `dob` date NOT NULL,
   `password` varchar(30) NOT NULL,
   `email` varchar(30) NOT NULL,
   `usertype` varchar(20) NOT NULL DEFAULT 'user',
@@ -42,18 +43,12 @@ CREATE TABLE `user` (
 -- Dumping data for table `user`
 --
 
-INSERT INTO `user` (`id`, `username`, `password`, `email`, `usertype`, `name`, `verification_code`, `email_verified_at`) VALUES
-(1, 'admin', '1234', 'admin@gmail.com', 'admin', 'USER', '', NULL),
-(2, 'user', '1234', 'user@gmail.com', 'user', '', '', NULL),
-(3, 'staff', '1234', 'staff@gmail.com', 'staff', '', '', NULL),
-(18, 'benlim2002', '1234', 'benlccop123@gmail.com', 'user', 'Ben Lim', '724533', NULL),
-(19, 'knax2424', '1234', 'benlccop123@gmail.com', 'user', 'Kok Eason', '340495', NULL),
-(20, 'c.notsure', '1234', 'benlccop123@gmail.com', 'user', 'Irwan', '599568', NULL),
-(21, 'c.notsure', '1234', 'benlccop123@gmail.com', 'user', 'Irwan', '205017', NULL),
-(22, 'c.notsure', '1234', 'yasuocs@gmail.com', 'user', 'Irwan', '688034', NULL),
-(23, 'c.notsure', '123', 'yasuocs@gmail.com', 'user', 'Irwan', '129720', NULL),
-(24, '224ewq', 'wqe', 'choong.b@graduate.utm.my', 'user', 'Kok Eason1', '148595', NULL),
-(25, 'knax2424', '123', 'benlccop123@gmail.com', 'user', 'Ben Lim', '396048', NULL);
+INSERT INTO `user` (`id`, `username`, `dob`, `password`, `email`, `usertype`, `name`, `verification_code`, `email_verified_at`) VALUES
+(1, 'admin', '0000-00-00', '12345', 'admin@gmail.com', 'admin', 'USER', '', NULL),
+(2, 'user', '0000-00-00', '1234', '', 'user', '', '935769', NULL),
+(3, 'staff', '0000-00-00', '12345', 'staff@gmail.com', 'staff', '', '', NULL),
+(61, 'benny', '0000-00-00', '12345', 'benlccop123@gmail.com', 'user', 'Ben Lim ', '122819', NULL),
+(64, '', '0000-00-00', '12345', 'benlccop123@gmail.com', 'user', '', '117711', NULL);
 
 --
 -- Indexes for dumped tables
@@ -73,7 +68,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=65;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
