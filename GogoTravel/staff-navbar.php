@@ -43,8 +43,13 @@
 
 							  <div class="collapse navbar-collapse justify-content-end align-items-center" id="navbarSupportedContent">
 							    <ul class="navbar-nav">				
+<<<<<<< HEAD
 									<li><a href="admin-packages.php">Service</a></li>
 									<li><a href="staffcont.php">Users</a></li>	
+=======
+									<li><a href="admin-services.php">Service</a></li>
+									<li><a href="view_users2.php">Users</a></li>	
+>>>>>>> b0771092f1b0c2c5a4e7d0c55fb8c31391f47680
 									<!-- Dropdown -->
                                     
 									<?php
