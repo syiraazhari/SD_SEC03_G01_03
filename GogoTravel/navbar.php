@@ -3,6 +3,7 @@
   include 'login_config.php';
   @$id = $_SESSION['id'];
   @$username = $_SESSION['username'];
+  @$usertype = $_SESSION['usertype'];
 ?>
 
 
@@ -29,7 +30,7 @@
 				<header class="default-header">
 					<nav class="navbar navbar-expand-lg  navbar-light">
 						<div class="container">
-							  <a class="navbar-brand" href="main.php">
+							  <a class="navbar-brand">
 							  	<img src="img/logo.png" alt="">
 							  </a>
 							  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -38,12 +39,41 @@
 
 							  <div class="collapse navbar-collapse justify-content-end align-items-center" id="navbarSupportedContent">
 							    <ul class="navbar-nav">
-									<li><a href="main.php">Home</a></li>				
-									<li><a href="packages.php">Packages</a></li>
-									<li><a href="gallery.php">Gallery</a></li>
-									<li><a href="about.php">About</a></li>	
-									<li><a href="faq.php">Faq</a></li>
-									<li><a href="contact.php">Contact</a></li>
+
+									<?php
+									if ($usertype == ''){
+										echo "
+										<li><a href='main.php'>Home</a></li>				
+										<li><a href='packages.php'>Packages</a></li>
+										<li><a href='gallery.php'>Gallery</a></li>
+										<li><a href='about.php'>About</a></li>	
+										<li><a href='faq.php'>Faq</a></li>
+										<li><a href='contact.php'>Contact</a></li>";
+									}
+									else if ($usertype == 'user'){
+										echo "
+										<li><a href='main.php'>Home</a></li>				
+										<li><a href='packages.php'>Packages</a></li>
+										<li><a href='#'>Bookings</a></li>
+										<li><a href='gallery.php'>Gallery</a></li>
+										<li><a href='about.php'>About</a></li>	
+										<li><a href='faq.php'>Faq</a></li>
+										<li><a href='contact.php'>Contact</a></li>";
+									}
+									else if($usertype == 'admin'){
+										echo "
+										<li><a href='services.php'>Service</a></li>
+										<li><a href='admin-view_staff.php'>Staff</a></li>
+										<li><a href='admin-view_user.php'>User</a></li>	";
+									}
+									else if($usertype == 'staff'){
+										echo "
+										<li><a href='services.php'>Service</a></li>
+										<li><a href='staff-view_user.php'>Users</a></li>	";
+									}
+									?>
+										
+
 									<!-- Dropdown -->
                                     
                                     <?php
@@ -52,7 +82,6 @@
 										<a class='dropdown-toggle' href='#' id='navbardrop' data-toggle='dropdown'>$username</a>
 										<div class='dropdown-menu'>
 										  <a class='dropdown-item' href='profileview.php'>Profile</a>
-										  <a class='dropdown-item' href='#'>Bookings</a>
 										  <a class='dropdown-item' href='logout.php'>Logout</a>
 										</div>
 									  </li>";
