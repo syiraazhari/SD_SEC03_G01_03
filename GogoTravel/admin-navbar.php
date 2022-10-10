@@ -3,11 +3,11 @@
   include 'login_config.php';
   $id = $_SESSION['id'];
   $username = $_SESSION['username'];
+  $usertype = $_SESSION['usertype'];
 ?>
 
 <link rel="shortcut icon" href="img/fav.png">
 		<meta charset="UTF-8">
-		<title>Gogo Travel</title>
 
 		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet"> 
 			<!--
@@ -39,24 +39,22 @@
 							    <ul class="navbar-nav">				
 									<li><a href="admin-packages.php">Service</a></li>
 									<li><a href="staffcont.php">Staff</a></li>
-									<li><a href="view_users.php">User</a></li>	
+									<li><a href="admin-view_user.php">User</a></li>	
 									<!-- Dropdown -->
                                     
 									<?php
-                                    //if($_SESSION['login']==true){
-										//$username=$_SESSION['username'];
+									if (isset($username)){
 										echo "<li class='dropdown'>
-										<a class='dropdown-toggle' href='#' id='navbardrop' data-toggle='dropdown'>
-										</a>
+										<a class='dropdown-toggle' href='#' id='navbardrop' data-toggle='dropdown'>$username</a>
 										<div class='dropdown-menu'>
-										  <a class='dropdown-item' href='profile.php'>Profile</a>
+										  <a class='dropdown-item' href='profileview.php'>Profile</a>
 										  <a class='dropdown-item' href='logout.php'>Logout</a>
 										</div>
 									  </li>";
-                                    //}
-                                    //else {
-                                     // echo" <li><a href='signin.php'>Login</a></li>";
-                                   // }
+									}
+                                    else {
+                                     echo" <li><a href='signin.php'>Sign In</a></li>";
+									}
                                     ?>
 							    </ul>
 							  </div>						

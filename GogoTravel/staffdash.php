@@ -21,7 +21,7 @@
     </head>
     <body>
 		<?php
-		include("staff-navbar.php")
+		include("navbar.php")
 		?>
 
 							

@@ -21,7 +21,7 @@
     </head>
     <body>
 		<?php
-		include("admin-navbar.php")
+		include("navbar.php")
 		?>
 
 							

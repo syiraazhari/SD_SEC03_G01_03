@@ -1,5 +1,5 @@
 <?php
-include 'admin-navbar.php';
+    include 'navbar.php';
 ?>
 
 <!DOCTYPE html>
@@ -7,7 +7,7 @@ include 'admin-navbar.php';
 <head lang="en">  
     <meta charset="UTF-8">  
     <link type="text/css" rel="stylesheet" href="bootstrap-3.2.0-dist\css\bootstrap.css">
-    <title>View Users</title>  
+    <title>View Staff</title>  
 </head>
 <style>  
     .login-panel {  
@@ -21,18 +21,19 @@ include 'admin-navbar.php';
 <body>  
   
 <div class="table-scrol">  
-    <h1 align="center">All the Users</h1>  
+    <h1 align="center"><br>Staff Lists</h1>  
   
-<div class="table-responsive">
+<div class="container col-lg-10">
     <table class="table table-bordered table-hover table-striped" style="table-layout: fixed">  
         <thead>  
   
         <tr>  
   
-            <th>User Id</th>  
-            <th>User Name</th>  
-            <th>User Password</th>  
-            <th>User Email</th>  
+            <th>ID</th>  
+            <th>Full Name</th>
+            <th>Username</th>  
+            <th>Password</th>  
+            <th>Email</th>  
             <th>Delete User</th>  
         </tr>  
         </thead>
@@ -40,12 +41,13 @@ include 'admin-navbar.php';
         <?php  
           
         include 'config.php';
-        $sql = "SELECT * FROM user";
+        $sql = "SELECT * FROM user WHERE usertype = 'staff'";
         $result = mysqli_query($conn, $sql);
 
         while($row=mysqli_fetch_array($result))
         {  
             $user_id=$row[0];  
+            $user_fullname=$row[5];
             $user_username=$row[1];  
             $user_password=$row[2];  
             $user_email=$row[3];  
@@ -54,6 +56,7 @@ include 'admin-navbar.php';
     
         <tr>
             <td><?php echo $user_id;  ?></td>  
+            <td><?php echo $user_fullname;  ?></td>
             <td><?php echo $user_username;  ?></td>  
             <td><?php echo $user_password;  ?></td>  
             <td><?php echo $user_email;  ?></td>  

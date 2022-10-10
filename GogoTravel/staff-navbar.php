@@ -1,19 +1,13 @@
 <?php 
   session_start(); 
-  if (!isset($_SESSION['id'])) {
-    $_SESSION['msg'] = "You must log in first";
-    header('location: signin.php');
-  }
-  if (isset($_GET['logout'])) {
-    session_destroy();
-    unset($_SESSION['user_id']);
-    header("location: signin.php");
-  }
+  include 'login_config.php';
+  $id = $_SESSION['id'];
+  $username = $_SESSION['username'];
+  $usertype = $_SESSION['usertype'];
 ?>
 
 <link rel="shortcut icon" href="img/fav.png">
 		<meta charset="UTF-8">
-		<title>Gogo Travel</title>
 
 		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet"> 
 			<!--
@@ -42,31 +36,26 @@
 							  </button>
 
 							  <div class="collapse navbar-collapse justify-content-end align-items-center" id="navbarSupportedContent">
-							    <ul class="navbar-nav">				
-<<<<<<< HEAD
-									<li><a href="admin-packages.php">Service</a></li>
-									<li><a href="staffcont.php">Users</a></li>	
-=======
+							    <ul class="navbar-nav">	
+
 									<li><a href="admin-services.php">Service</a></li>
-									<li><a href="view_users2.php">Users</a></li>	
->>>>>>> b0771092f1b0c2c5a4e7d0c55fb8c31391f47680
+									<li><a href="staff-view_user.php">Users</a></li>	
+
 									<!-- Dropdown -->
                                     
 									<?php
-                                    //if($_SESSION['login']==true){
-										//$username=$_SESSION['username'];
+									if (isset($username)){
 										echo "<li class='dropdown'>
-										<a class='dropdown-toggle' href='#' id='navbardrop' data-toggle='dropdown'>
-										</a>
+										<a class='dropdown-toggle' href='#' id='navbardrop' data-toggle='dropdown'>$username</a>
 										<div class='dropdown-menu'>
-										  <a class='dropdown-item' href='profile.php'>Profile</a>
+										  <a class='dropdown-item' href='profileview.php'>Profile</a>
 										  <a class='dropdown-item' href='logout.php'>Logout</a>
 										</div>
 									  </li>";
-                                    //}
-                                    //else {
-                                     // echo" <li><a href='signin.php'>Login</a></li>";
-                                   // }
+									}
+                                    else {
+                                     echo" <li><a href='signin.php'>Sign In</a></li>";
+									}
                                     ?>
 							    </ul>
 							  </div>						
