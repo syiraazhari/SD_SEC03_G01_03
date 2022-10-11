@@ -14,7 +14,7 @@
 
         
         <!-- Start project Area -->
-        <section class="project-area section-gap" id="project">
+        <section class="project-area" id="project"> <br> <br>
             <div class="container">
                 <div class="row d-flex justify-content-center">
                     <div class="menu-content pb-30 col-lg-8">
@@ -64,9 +64,27 @@
                     </div>
                 </div>
             </div>	
+            <br> <br> <br> 
         </section>
         <!-- End project Area -->
 
+        <!-- Package Import -->
+        <?php  
+          
+          include 'config.php';
+          $sql = "SELECT * FROM packages WHERE package_id= '2'";
+          $result = mysqli_query($conn, $sql);
+  
+          while($row=mysqli_fetch_array($result))
+          {  
+              $package_id=$row[0];
+              $title=$row[1];  
+              $price=$row[2];
+              $memo=$row[3];
+              $duration=$row[4];
+              $location=$row[5];  
+          }     
+        ?>
 
         <!-- Start feature Area -->
         <section class="feature-area section-gap" id="secvice">
@@ -80,69 +98,123 @@
                     </div>
                 </div>						
                 <div class="row">
-                    <div class="col-lg-4 col-md-6 ">
+                    <div class="col-lg-4 col-md-6 "> <!-- Column 1 Travel Package -->
                         <div class="single-feature mb-30">
                             <div class="title d-flex flex-row pb-20">
                                 <span class="lnr lnr-license"></span>
-                                <h4><a href="#">2D1N Pulau Pangkor <br> *RM299* </a></h4>
+                                <?php 
+                                    $sql = "SELECT * FROM packages WHERE package_id= '1'";
+                                    $result = mysqli_query($conn, $sql);
+                            
+                                    while($row=mysqli_fetch_array($result))
+                                    {  $package_id=$row[0];  $title=$row[1];  $price=$row[2];  $memo=$row[3];  $duration=$row[4];  $location=$row[5];  }     
+                                ?>
+                                <h4><a href="#"><?php echo $title; ?><br> *RM<?php echo $price; ?>* </a></h4>
                             </div>
                             <p>
-                                Usage of the Internet is becoming more common due to rapid advancement of technology and power.
+                                Location: <?php echo $location ?> <br>
+                                Duration: <?php echo $duration ?> Days <br>
+                                <?php echo $memo ?> <br>
                             </p>							
                         </div>							
                     </div>
-                    <div class="col-lg-4 col-md-6 ">
+                    <div class="col-lg-4 col-md-6 "> <!-- Column 2 Travel Package -->
                         <div class="single-feature mb-30">
                             <div class="title d-flex flex-row pb-20">
                                 <span class="lnr lnr-license"></span>
-                                <h4><a href="#">4D3N Kuantan Trip <br> *RM599*</a></h4>
+                                <?php 
+                                    $sql = "SELECT * FROM packages WHERE package_id= '2'";
+                                    $result = mysqli_query($conn, $sql);
+                            
+                                    while($row=mysqli_fetch_array($result))
+                                    {  $package_id=$row[0];  $title=$row[1];  $price=$row[2];  $memo=$row[3];  $duration=$row[4];  $location=$row[5];  }     
+                                ?>
+                                <h4><a href="#"><?php echo $title; ?><br> *RM<?php echo $price; ?>* </a></h4>
                             </div>
                             <p>
-                                Usage of the Internet is becoming more common due to rapid advancement of technology and power.
+                                Location: <?php echo $location ?> <br>
+                                Duration: <?php echo $duration ?> Days <br>
+                                <?php echo $memo ?> <br>
                             </p>							
                         </div>							
                     </div>
-                    <div class="col-lg-4 col-md-6 ">
+                    <div class="col-lg-4 col-md-6 "> <!-- Column 3 Travel Package -->
                         <div class="single-feature mb-30">
                             <div class="title d-flex flex-row pb-20">
                                 <span class="lnr lnr-license"></span>
-                                <h4><a href="#">5D4N Sabah Trip <br> *RM999*</a></h4>
+                                <?php 
+                                    $sql = "SELECT * FROM packages WHERE package_id= '3'";
+                                    $result = mysqli_query($conn, $sql);
+                            
+                                    while($row=mysqli_fetch_array($result))
+                                    {  $package_id=$row[0];  $title=$row[1];  $price=$row[2];  $memo=$row[3];  $duration=$row[4];  $location=$row[5];  }     
+                                ?>
+                                <h4><a href="#"><?php echo $title; ?><br> *RM<?php echo $price; ?>* </a></h4>
                             </div>
                             <p>
-                                Usage of the Internet is becoming more common due to rapid advancement of technology and power.
+                                Location: <?php echo $location ?> <br>
+                                Duration: <?php echo $duration ?> Days <br>
+                                <?php echo $memo ?> <br>
+                            </p>							
+                        </div>						
+                    </div>
+                    <div class="col-lg-4 col-md-6 "> <!-- Column 4 Travel Package -->
+                        <div class="single-feature mb-30">
+                            <div class="title d-flex flex-row pb-20">
+                                <span class="lnr lnr-license"></span>
+                                <?php 
+                                    $sql = "SELECT * FROM packages WHERE package_id= '4'";
+                                    $result = mysqli_query($conn, $sql);
+                            
+                                    while($row=mysqli_fetch_array($result))
+                                    {  $package_id=$row[0];  $title=$row[1];  $price=$row[2];  $memo=$row[3];  $duration=$row[4];  $location=$row[5];  }     
+                                ?>
+                                <h4><a href="#"><?php echo $title; ?><br> *RM<?php echo $price; ?>* </a></h4>
+                            </div>
+                            <p>
+                                Location: <?php echo $location ?> <br>
+                                Duration: <?php echo $duration ?> Days <br>
+                                <?php echo $memo ?> <br>
                             </p>							
                         </div>							
                     </div>
-                    <div class="col-lg-4 col-md-6 ">
-                        <div class="single-feature">
+                    <div class="col-lg-4 col-md-6 "> <!-- Column 5 Travel Package -->
+                        <div class="single-feature mb-30">
                             <div class="title d-flex flex-row pb-20">
                                 <span class="lnr lnr-license"></span>
-                                <h4><a href="#">3D2N Kuala Lumpur <br> *RM599*</a></h4>
+                                <?php 
+                                    $sql = "SELECT * FROM packages WHERE package_id= '5'";
+                                    $result = mysqli_query($conn, $sql);
+                            
+                                    while($row=mysqli_fetch_array($result))
+                                    {  $package_id=$row[0];  $title=$row[1];  $price=$row[2];  $memo=$row[3];  $duration=$row[4];  $location=$row[5];  }     
+                                ?>
+                                <h4><a href="#"><?php echo $title; ?><br> *RM<?php echo $price; ?>* </a></h4>
                             </div>
                             <p>
-                                Usage of the Internet is becoming more common due to rapid advancement of technology and power.
+                                Location: <?php echo $location ?> <br>
+                                Duration: <?php echo $duration ?> Days <br>
+                                <?php echo $memo ?> <br>
                             </p>							
                         </div>							
                     </div>
-                    <div class="col-lg-4 col-md-6 ">
-                        <div class="single-feature">
+                    <div class="col-lg-4 col-md-6 "> <!-- Column 6 Travel Package -->
+                        <div class="single-feature mb-30">
                             <div class="title d-flex flex-row pb-20">
                                 <span class="lnr lnr-license"></span>
-                                <h4><a href="#">2D1N Perhentian Camp <br> *RM299*</a></h4>
+                                <?php 
+                                    $sql = "SELECT * FROM packages WHERE package_id= '6'";
+                                    $result = mysqli_query($conn, $sql);
+                            
+                                    while($row=mysqli_fetch_array($result))
+                                    {  $package_id=$row[0];  $title=$row[1];  $price=$row[2];  $memo=$row[3];  $duration=$row[4];  $location=$row[5];  }     
+                                ?>
+                                <h4><a href="#"><?php echo $title; ?><br> *RM<?php echo $price; ?>* </a></h4>
                             </div>
                             <p>
-                                Usage of the Internet is becoming more common due to rapid advancement of technology and power.
-                            </p>							
-                        </div>							
-                    </div>
-                    <div class="col-lg-4 col-md-6 ">
-                        <div class="single-feature">
-                            <div class="title d-flex flex-row pb-20">
-                                <span class="lnr lnr-license"></span>
-                                <h4><a href="#">4D3N Langkawi Trip <br> *RM699*</a></h4>
-                            </div>
-                            <p>
-                                Usage of the Internet is becoming more common due to rapid advancement of technology and power.
+                                Location: <?php echo $location ?> <br>
+                                Duration: <?php echo $duration ?> Days <br>
+                                <?php echo $memo ?> <br>
                             </p>							
                         </div>							
                     </div>																					

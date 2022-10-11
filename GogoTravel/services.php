@@ -57,7 +57,9 @@
 
 
     <div class="table-scrol">  
-        <h1 align="center"><br><br>Quick View of Packages<br><br></h1>  
+        <h1 align="center"><br><br>Quick View of Packages<br></h1>  
+        <h4 align="center"> <a href="packages.php"; ><br>Preview of Packages Page</a> </h4>
+        <h4 align="center"> <a href="main.php"; ><br>Preview of Advertisement Page<br><br><br><br></a> </h4>
 
         <div class="container col-lg-10">
             <table class="table table-bordered table-hover table-striped" style="table-layout: fixed">  
@@ -99,7 +101,7 @@
                     <td><?php echo $location;  ?></td>
                     <td><a href="delete-packages.php?del_package=<?php echo $package_id ?>"><button class="btn btn-danger">Delete</button></a></td> <!--btn btn-danger is a bootstrap button to show danger-->     
                 </tr>
-            <?php } ?>
+            <?php } ?> 
             </table>
             </div>
         </div>

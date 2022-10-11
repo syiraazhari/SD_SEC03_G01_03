@@ -15,6 +15,7 @@
     include 'config.php';
 
     if(isset($_POST['add_pkg'])){
+        $pkg_id = $_POST['pkg_id'];
         $title = $_POST['title'];
         $price = $_POST['price'];
         $memo = $_POST['memo'];
@@ -23,17 +24,17 @@
 
         
     $conn = mysqli_connect("localhost", "root", "", "sd_g01_03");
-    $sql = "INSERT INTO packages (title, price, memo, duration, location) VALUES ('$title', '$price' , '$memo' , '$duration' , '$location')";
+    $sql = "INSERT INTO packages (package_id, title, price, memo, duration, location) VALUES ('$pkg_id' , '$title', '$price' , '$memo' , '$duration' , '$location')";
 
         if ($conn->query($sql)===true){
-            header("location:admindash.php");
+            header("location:services.php");
         } else{
             die(mysqli_error($conn));
         }
     }
 ?>
 
-<body>  
+<body>   
   
 <div class="table-scrol">  
     
@@ -58,7 +59,11 @@
                                 <h2><a href="#">Travel Packages</a></h2>
                             </div>
                             <div>
-                                    <label class="col-md-3">Title:</label>
+                                    <label class="col-md-3">Package ID:</label>
+                                    <input type="number" id="pkg_id" name="pkg_id" class="form-control" placeholder="Package ID"required>
+                            </div>
+                            <div>
+                                    <label class="col-md-3"><br>Title:</label>
                                     <input type="text" id="title" name="title" class="form-control" placeholder="Package Title"required>
                             </div>	
                             <div>
@@ -91,4 +96,5 @@
             </div>	
         </section>
         <!-- End feature Area -->       
+</body>
 </html>
