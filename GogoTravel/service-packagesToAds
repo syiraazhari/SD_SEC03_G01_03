@@ -1,0 +1,14 @@
+<?php  
+
+    include 'config.php';  
+    $move_id=$_GET['move_package'];  
+    $move_query="INSERT TO advert WHERE package_id='$move_id'";
+    $run=mysqli_query($conn,$move_query);
+    
+    if($run)  
+    {  
+        //javascript function to open in the same window   
+        echo "<script>window.open('services.php?deleted=user has been deleted','_self')</script>";  
+    }  
+  
+?> 

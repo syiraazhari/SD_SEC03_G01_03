@@ -69,21 +69,8 @@
         <!-- End project Area -->
 
         <!-- Package Import -->
-        <?php  
-          
-          include 'config.php';
-          $sql = "SELECT * FROM packages WHERE package_id= '2'";
-          $result = mysqli_query($conn, $sql);
-  
-          while($row=mysqli_fetch_array($result))
-          {  
-              $package_id=$row[0];
-              $title=$row[1];  
-              $price=$row[2];
-              $memo=$row[3];
-              $duration=$row[4];
-              $location=$row[5];  
-          }     
+        <?php    
+          include 'config.php';    
         ?>
 
         <!-- Start feature Area -->

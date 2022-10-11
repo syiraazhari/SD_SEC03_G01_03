@@ -21,7 +21,9 @@
 		</head>
 		<body>
 			<?php
-			include("navbar.php")
+			include ("navbar.php");	 
+			include ("config.php");   
+		  ?>
 			?>
 
 			<section class="default-banner active-blog-slider">
@@ -30,12 +32,17 @@
 						<div class="container">
 							<div class="row fullscreen justify-content-center align-items-center">
 								<div class="col-md-10 col-12">
-									<div class="banner-content text-center">
-										<h4 class="text-white mb-20 text-uppercase">Discover the Wonderful Geopark of Langkawi</h4>
-										<h1 class="text-uppercase text-white">Now only from RM699 for 4pax</h1>
-										<p class="text-white">The Langkawi Geopark is the honorific moniker of the Langkawi archipelago in its entirety. <br>
-										That's right, all 99 islands (104 at low tide). And depending on which social circles you run in, <br>
-										Langkawi UNESCO Global Geopark would be the 'official' title claim. </p>
+									<div class="banner-content text-center"> <!-- Advertisement 1 -->
+										<?php 
+											$sql = "SELECT * FROM advert WHERE package_id= '1'";
+											$result = mysqli_query($conn, $sql);
+									
+											while($row=mysqli_fetch_array($result))
+											{  $package_id=$row[0];  $title=$row[1];  $info=$row[2];  $price=$row[3];  $memo=$row[4];}     
+										?>
+										<h4 class="text-white mb-20 text-uppercase"><?php echo $title ?></h4>
+										<h1 class="text-uppercase text-white"><?php echo $info, $price ?></h1>
+										<p class="text-white"><?php echo $memo ?>. </p>
 										<a href="signin.php" class="text-uppercase header-btn">Discover Now</a>
 									</div>
 								</div>
@@ -49,11 +56,16 @@
 							<div class="row fullscreen justify-content-center align-items-center">
 								<div class="col-md-10 col-12">
 									<div class="banner-content text-center">
-										<h4 class="text-white mb-20 text-uppercase">Discover the Beautiful Rainforest of Borneo</h4>
-										<h1 class="text-uppercase text-white">Starting from RM599</h1>
-										<p class="text-white">Borneo, a giant, rugged island in Southeast Asia’s Malay <br>
-										Archipelago, is shared by the Malaysian states of Sabah and <br>
-										Sarawak, Indonesian Kalimantan and the tiny nation of Brunei.</p>
+										<?php 
+											$sql = "SELECT * FROM advert WHERE package_id= '2'";
+											$result = mysqli_query($conn, $sql);
+									
+											while($row=mysqli_fetch_array($result))
+											{  $package_id=$row[0];  $title=$row[1];  $info=$row[2];  $price=$row[3];  $memo=$row[4];}     
+										?>
+										<h4 class="text-white mb-20 text-uppercase"><?php echo $title ?></h4>
+										<h1 class="text-uppercase text-white"><?php echo $info, $price ?></h1>
+										<p class="text-white"><?php echo $memo ?>. </p>
 										<a href="signin.php" class="text-uppercase header-btn">Discover Now</a>
 									</div>
 								</div>
@@ -66,11 +78,16 @@
 							<div class="row fullscreen justify-content-center align-items-center">
 								<div class="col-md-10 col-12">
 									<div class="banner-content text-center">
-										<h4 class="text-white mb-20 text-uppercase">Discover the Capital of Malaysia</h4>
-										<h1 class="text-uppercase text-white">RM1k for 4d3n</h1>
-										<p class="text-white">Malaysia's capital and largest city has much to offer travelers. Perhaps best known for the <br>
-										Petronas Twin Towers (the world's tallest twin towers), KL is a very popular tourist <br>
-										destination and routinely makes the list of top 10 most visited cities in the world.</p>
+										<?php 
+											$sql = "SELECT * FROM advert WHERE package_id= '3'";
+											$result = mysqli_query($conn, $sql);
+									
+											while($row=mysqli_fetch_array($result))
+											{  $package_id=$row[0];  $title=$row[1];  $info=$row[2];  $price=$row[3];  $memo=$row[4];}     
+										?>
+										<h4 class="text-white mb-20 text-uppercase"><?php echo $title ?></h4>
+										<h1 class="text-uppercase text-white"><?php echo $info, $price ?></h1>
+										<p class="text-white"><?php echo $memo ?>. </p>
 										<a href="signin.php" class="text-uppercase header-btn">Discover Now</a>
 									</div>
 								</div>
