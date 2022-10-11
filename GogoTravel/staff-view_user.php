@@ -60,7 +60,7 @@
             <td><?php echo $user_username;  ?></td>  
             <td><?php echo $user_password;  ?></td>  
             <td><?php echo $user_email;  ?></td>  
-            <td><a href="delete.php?del=<?php echo $user_id ?>"><button class="btn btn-danger">Delete</button></a></td> <!--btn btn-danger is a bootstrap button to show danger-->  
+            <td><a href="delete-user.php?del=<?php echo $user_id ?>"><button class="btn btn-danger">Delete</button></a></td> <!--btn btn-danger is a bootstrap button to show danger-->  
         </tr>
     <?php } ?>
     </table>
