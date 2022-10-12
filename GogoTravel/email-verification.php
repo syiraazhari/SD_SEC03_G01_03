@@ -48,7 +48,7 @@
 		<div class="container col-lg-4 ">
 			<div class="row d-flex justify-content-center" style="background-color: rgb(5, 5, 5);">
 				<div class="col-md-6 text-center mb-5">
-					<h2 class="heading-section" style="color : rgb(235, 226, 226)">Verify your email.</h2>
+					<h2 class="heading-section" style="color : rgb(235, 226, 226)"><br>Verify your email.</h2>
 				</div>
 			</div>
                 <div class="row d-flex justify-content-center" style="background-color: rgb(243, 245, 250);">
