@@ -21,7 +21,8 @@
 <body>  
   
 <div class="table-scrol">  
-    <h1 align="center"><br>Staff Lists</h1>  
+    <h1 align="center"><br>Staff Lists</h1> 
+    <h4 align="center"> <a href="admin-add_staff.php"; ><br>Add Staff</a> </h4> 
   
 <div class="container col-lg-10">
     <table class="table table-bordered table-hover table-striped" style="table-layout: fixed">  
@@ -47,10 +48,10 @@
         while($row=mysqli_fetch_array($result))
         {  
             $user_id=$row[0];  
-            $user_fullname=$row[5];
+            $user_fullname=$row[2];
             $user_username=$row[1];  
-            $user_password=$row[2];  
-            $user_email=$row[3];  
+            $user_password=$row[3];  
+            $user_email=$row[4];  
         
         ?>
     

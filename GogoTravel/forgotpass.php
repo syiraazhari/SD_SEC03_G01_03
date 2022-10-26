@@ -49,22 +49,24 @@
             $verification_code = substr(number_format(time() * rand(), 0, '', ''), 0, 6);
  
             $mail->Subject = 'Password Reset';
-            $mail->Body    = '<p>Your password reset code is: <b style="font-size: 30px;">' . $verification_code . '</b></p>';
+            $mail->Body    = '<p>Your password reset link is:  <b style="font-size: 30px;"></b></p> <a href="localhost/SD_SEC03_G01_03/GogoTravel/resetpassconfirm.php";>HERE</a>';
  
             $mail->send();
+
+			header("location:resetpass.php");
             // echo 'Message has been sent';
  
             // connect with database
-            $conn = mysqli_connect("localhost", "root", "", "sd_g01_03");
+            //$conn = mysqli_connect("localhost", "root", "", "sd_g01_03");
 	
 
-			$sql = "INSERT INTO user (name, username, password, email, verification_code) VALUES ('$name', '$username' , '$password', '$email', '$verification_code')";
+			//$sql = "INSERT INTO user (name, username, password, email, verification_code) VALUES ('$name', '$username' , '$password', '$email', '$verification_code')";
 			
-			if ($conn->query($sql)===true){
-				header("location:resetpass.php");
-			} else{
-				die(mysqli_error($conn));
-			}
+			//if ($conn->query($sql)===true){
+			//	header("location:resetpass.php");
+			//} else{
+			//	die(mysqli_error($conn));
+			//}
 
 		}catch (Exception $e){
 			echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";

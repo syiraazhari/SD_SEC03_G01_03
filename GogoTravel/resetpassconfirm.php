@@ -22,16 +22,27 @@
 	<body>
 <?php
     include 'config.php';
-    
+
     if(isset($_POST['change_password'])){
 
-            $email = $_SESSION["email"];
-            $cpassword = mysqli_real_escape_string($conn, $_POST['cpassword']);
-
-            mysqli_query($conn, "UPDATE user SET password = '$cpassword' WHERE email = 'benlccop123@gmail.com'");
-            
-            header("location:signin.php");
-        
+            $email = $_POST["email"];
+            $_SESSION['email'] = $email;
+            $cpassword = $_POST["cpassword"];
+    
+            // connect with database
+            $conn = mysqli_connect("localhost", "root", "", "sd_g01_03");
+    
+            // mark email as verified
+            mysqli_query($conn, "UPDATE user SET password = '$cpassword' WHERE id = '$id'");
+    
+    
+            if (mysqli_affected_rows($conn) == 0)
+            {
+                header("location:signin.php");
+            }else
+    
+            echo "<p>You can login now.</p>";
+            exit();
     }
  
 ?>
@@ -49,7 +60,7 @@
                                 <div class="form-group mb-3">
                                     <br>
                                     <label class="label" for="name">New Password</label>
-                                    <input name="password" type="password" class="form-control" placeholder="New Password" required>
+                                    <input name="cassword" type="password" class="form-control" placeholder="New Password" required>
                                 </div>
                                 <div class="form-group mb-3">
                                     <label class="label" for="date">Confirm Password</label>

@@ -64,14 +64,10 @@
                                     <p class=fz-18 for="text">We have sent a verification code to your email for password reset.</p>
                                 </div>
                                 <div class="form-group mb-3">
-                                    <label class="label" for="text">6-Digit Code</label>
-                                    <input type="text" name="verification_code" placeholder="Enter verification code" required />
+                                    <label class="label" for="text">Please refer to your e-mail for further password recovery.</label>
+                                    
                                 </div>
-                                <div class="row d-flex justify-content-center">
-                                    <div class="form-group col-md-12 col-lg-7">
-                                        <button name="verify_email" value="Verify Email" type="submit" class="form-control btn btn-primary submit px-3">Verify</button>
-                                    </div>
-                                </div>
+    
                         </form>
                     </div>
                 </div>
