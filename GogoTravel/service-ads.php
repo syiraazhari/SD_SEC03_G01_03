@@ -103,7 +103,7 @@
                         <th style="text-align: center" class="col-lg-2">Title</th> 
                         <th style="text-align: center" class="col-lg-1">Price</th>  
                         <th style="text-align: center">Memo</th>  
-                        <th style="text-align: center" class="col-lg-1">Action</th>  
+                        <th style="text-align: center" class="col-lg-2">Action</th>  
                     </tr>  
                     </thead>
 
@@ -128,7 +128,8 @@
                         <td><br><?php echo $title;  ?></td>
                         <td><br><?php echo $price;  ?> <br><br></td> 
                         <td style="text-align: center" ><br><?php echo $memo;?></td>  
-                        <td style="text-align: center"><br><a href="delete-advert.php?del_advert=<?php echo $package_id ?>"><button class="btn btn-danger">Delete</button></a></td> <!--btn btn-danger is a bootstrap button to show danger-->     
+                        <td style="text-align: center"><br><a href="delete-advert.php?del_advert=<?php echo $package_id ?>"><button class="btn btn-danger">Delete</button></a>
+                                                <a href="service-ads-edit.php?update_package=<?php echo $package_id ?>"><button class="btn btn-warning">Update</button></a></td>    
                     </tr>
                 <?php } ?> 
                 </table>

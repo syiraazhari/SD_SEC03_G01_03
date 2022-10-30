@@ -61,8 +61,8 @@
             <td><?php echo $user_username;  ?></td>  
             <td><?php echo $user_password;  ?></td>  
             <td><?php echo $user_email;  ?></td>  
-            <td><a href="delete-user.php?del=<?php echo $user_id ?>"><button class="btn btn-danger">Delete</button></a></td> <!--btn btn-danger is a bootstrap button to show danger-->  
-        </tr>
+            <td><a href="delete-user.php?del=<?php echo $user_id ?>"><button class="btn btn-danger">Delete</button></a>
+                <a href="admin-edit-staff.php?update_staff=<?php echo $user_id ?>"><button class="btn btn-warning">Edit</button></a></td> 
     <?php } ?>
     </table>
     </div>

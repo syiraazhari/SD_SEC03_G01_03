@@ -101,7 +101,7 @@
                     <td style="text-align: center" ><br><?php echo $duration;?> Days </td>  
                     <td><br><?php echo $location;  ?></td>
                     <td style="text-align: center"><br><a href="delete-packages.php?del_package=<?php echo $package_id ?>"><button class="btn btn-danger">Delete</button></a>
-                                                    <a href="service-packagesToAds.php?move_package=<?php echo $package_id ?>"><button class="btn btn-warning">Move</button></a></td> 
+                                                    <a href="service-packages-edit.php?update_package=<?php echo $package_id ?>"><button class="btn btn-warning">Update</button></a></td> 
                     
                 </tr>
             <?php } ?> 
