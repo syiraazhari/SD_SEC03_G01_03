@@ -29,12 +29,12 @@
   
         <tr>  
   
-            <th>ID</th>  
-            <th>Full Name</th>
-            <th>Username</th>  
-            <th>Password</th>  
-            <th>Email</th>  
-            <th>Delete User</th>  
+            <th style="text-align: center" class="col-lg-1">ID</th>  
+            <th style="text-align: center" class="col-lg-2">Full Name</th>
+            <th style="text-align: center" class="col-lg-1">Username</th>  
+            <th style="text-align: center" class="col-lg-1">Password</th>  
+            <th style="text-align: center" class="col-lg-1">Email</th>  
+            <th style="text-align: center" class="col-lg-1">Delete User</th>  
         </tr>  
         </thead>
 
@@ -55,12 +55,12 @@
         ?>
     
         <tr>
-            <td><?php echo $user_id;  ?></td>  
+            <td style="text-align: center"><?php echo $user_id;  ?></td>  
             <td><?php echo $user_fullname;  ?></td>
             <td><?php echo $user_username;  ?></td>  
             <td><?php echo $user_password;  ?></td>  
             <td><?php echo $user_email;  ?></td>  
-            <td><a href="delete-user.php?del=<?php echo $user_id ?>"><button class="btn btn-danger">Delete</button></a></td> <!--btn btn-danger is a bootstrap button to show danger-->  
+            <td style="text-align: center"><a href="delete-user.php?del=<?php echo $user_id ?>"><button class="btn btn-danger">Delete</button></a></td> <!--btn btn-danger is a bootstrap button to show danger-->  
         </tr>
     <?php } ?>
     </table>

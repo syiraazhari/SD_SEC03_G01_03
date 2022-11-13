@@ -5,9 +5,17 @@
 	use PHPMailer\PHPMailer\SMTP;
 
 	require 'vendor/autoload.php';
+	require 'config.php';
 
 	if(isset($_POST['forgotpass'])){
 		$email = $_POST['email'];
+
+		$code = uniqid(true);
+		$query = mysqli_query($conn, "INSERT INTO resetpassword(email, reset_code) VALUES('$email', '$code')");
+
+		if(!$query){
+			exit("error");
+		}
 
 		//Instantiation and passing `true` enables exceptions
         $mail = new PHPMailer(true);
@@ -47,9 +55,9 @@
             $mail->isHTML(true);
  
             $verification_code = substr(number_format(time() * rand(), 0, '', ''), 0, 6);
- 
+
             $mail->Subject = 'Password Reset';
-            $mail->Body    = '<p>Your password reset link is:  <b style="font-size: 30px;"></b></p> <a href="localhost/SD_SEC03_G01_03/GogoTravel/resetpassconfirm.php";>HERE</a>';
+            $mail->Body    = "<p>Your password reset link is: <a href=localhost/SD_SEC03_G01_03/GogoTravel/resetpassconfirm.php?code=$code> HERE</a>";
  
             $mail->send();
 

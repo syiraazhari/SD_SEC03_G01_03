@@ -23,26 +23,27 @@
 <?php
     include 'config.php';
 
+    $code = $_GET["code"];
+    $getEmailQuery = mysqli_query($conn, "SELECT email from resetpassword WHERE reset_code = '$code'");
+
     if(isset($_POST['change_password'])){
 
-            $email = $_POST["email"];
-            $_SESSION['email'] = $email;
+
             $cpassword = $_POST["cpassword"];
     
             // connect with database
             $conn = mysqli_connect("localhost", "root", "", "sd_g01_03");
     
             // mark email as verified
-            mysqli_query($conn, "UPDATE user SET password = '$cpassword' WHERE id = '$id'");
+            $row = mysqli_fetch_array($getEmailQuery);
+            $email = $row["email"];
+
+            $query = mysqli_query($conn, "UPDATE user SET password ='$cpassword' WHERE email ='$email'");
     
-    
-            if (mysqli_affected_rows($conn) == 0)
-            {
+            if($query){
                 header("location:signin.php");
-            }else
-    
-            echo "<p>You can login now.</p>";
-            exit();
+                $query = mysqli_query($conn, "DELETE FROM resetpassword WHERE reset_code ='$code'");
+            }
     }
  
 ?>
@@ -60,7 +61,7 @@
                                 <div class="form-group mb-3">
                                     <br>
                                     <label class="label" for="name">New Password</label>
-                                    <input name="cassword" type="password" class="form-control" placeholder="New Password" required>
+                                    <input name="cpassword" type="password" class="form-control" placeholder="New Password" required>
                                 </div>
                                 <div class="form-group mb-3">
                                     <label class="label" for="date">Confirm Password</label>
