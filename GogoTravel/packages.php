@@ -34,6 +34,7 @@
                                 National Park. Remarkably rocky, tremendously old, and a theater for eye-popping natural spectacles are just one click away.</p>
                             </div>
                         </div>
+                        
                         <div class="item">
                             <img class="img-fluid" src="img/city.jpg" alt="">
                             <div class="caption text-center mt-20">
@@ -70,7 +71,8 @@
 
         <!-- Package Import -->
         <?php    
-          include 'config.php';    
+          include 'config.php';  
+
         ?>
 
         <!-- Start feature Area -->
@@ -85,9 +87,9 @@
                     </div>
                 </div>						
                 <div class="row">
-                    <div class="col-lg-4 col-md-6 "> <!-- Column 1 Travel Package -->
-                        <div class="single-feature mb-30">
-                            <div class="title d-flex flex-row pb-20">
+                    <div class="col-lg-4 col-md-6 " > <!-- Column 1 Travel Package -->
+                        <div class="single-feature mb-30 " type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#box1">
+                            <div class="title d-flex flex-row pb-20" >
                                 <span class="lnr lnr-license"></span>
                                 <?php 
                                     $sql = "SELECT * FROM packages WHERE package_id= '1'";
@@ -96,17 +98,46 @@
                                     while($row=mysqli_fetch_array($result))
                                     {  $package_id=$row[0];  $title=$row[1];  $price=$row[2];  $memo=$row[3];  $duration=$row[4];  $location=$row[5];  }     
                                 ?>
-                                <h4><a href="#"><?php echo $title; ?><br> *RM<?php echo $price; ?>* </a></h4>
+                                <h4><a href="#" ><?php echo $title; ?><br> *RM<?php echo $price; ?>* </a></h4>
                             </div>
                             <p>
                                 Location: <?php echo $location ?> <br>
                                 Duration: <?php echo $duration ?> Days <br>
                                 <?php echo $memo ?> <br>
-                            </p>							
+                            </p>
+                                <div class="modal fade" id="box1" role="dialog">
+                                    <div class="modal-dialog modal-lg ">
+                                    
+                                    <!-- Modal content-->
+                                    <br><br><br><br>
+                                    <div class="modal-content text-center">
+                                        <div class="modal-header" style="font-size:5px">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        </div>
+                                        <div class="text-center">
+                                            <br><br>
+                                        <h3 class="modal-title"><p style="font-size:35px" ><?php echo $title; ?></p></h3>
+                                        <br>
+                                        </div>
+                                        <div class="modal-body">
+                                        <img class="img-fluid" src="img/islandhopping.jpg" alt="">
+                                        <br><br>
+                                        <p style="color:black; font-size:15px;">Location: <?php echo $location ?> <br>
+                                            Duration: <?php echo $duration ?> Days <br>
+                                            <?php echo $memo ?> <br></p>
+                                        </div>
+                                        <div class="modal-footer">
+                                        <a href="payment.php?book_package=<?php echo $package_id ?>"><button name="book" class="btn btn-warning">Book</button></a>
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                                    
+                                    </div>
+                                </div>						
                         </div>							
                     </div>
                     <div class="col-lg-4 col-md-6 "> <!-- Column 2 Travel Package -->
-                        <div class="single-feature mb-30">
+                        <div class="single-feature mb-30" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#box2">
                             <div class="title d-flex flex-row pb-20">
                                 <span class="lnr lnr-license"></span>
                                 <?php 
@@ -122,11 +153,40 @@
                                 Location: <?php echo $location ?> <br>
                                 Duration: <?php echo $duration ?> Days <br>
                                 <?php echo $memo ?> <br>
-                            </p>							
+                            </p>				
+                                <div class="modal fade" id="box2" role="dialog">
+                                    <div class="modal-dialog modal-lg">
+                                    
+                                    <!-- Modal content-->
+                                    <br><br><br><br>
+                                    <div class="modal-content text-center">
+                                        <div class="modal-header" style="font-size:5px">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        </div>
+                                        <div class="text-center">
+                                            <br><br>
+                                        <h3 class="modal-title"><p style="font-size:35px" ><?php echo $title; ?></p></h3>
+                                        <br>
+                                        </div>
+                                        <div class="modal-body">
+                                        <img class="img-fluid" src="img/islandhopping.jpg" alt="">
+                                        <br><br>
+                                        <p style="color:black; font-size:15px;">Location: <?php echo $location ?> <br>
+                                            Duration: <?php echo $duration ?> Days <br>
+                                            <?php echo $memo ?> <br></p>
+                                        </div>
+                                        <div class="modal-footer">
+                                        <a href="payment.php?book_package=<?php echo $package_id ?>"><button name="book" class="btn btn-warning">Book</button></a>
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                                    
+                                    </div>
+                                </div>					
                         </div>							
                     </div>
                     <div class="col-lg-4 col-md-6 "> <!-- Column 3 Travel Package -->
-                        <div class="single-feature mb-30">
+                        <div class="single-feature mb-30" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#box3">
                             <div class="title d-flex flex-row pb-20">
                                 <span class="lnr lnr-license"></span>
                                 <?php 
@@ -142,11 +202,40 @@
                                 Location: <?php echo $location ?> <br>
                                 Duration: <?php echo $duration ?> Days <br>
                                 <?php echo $memo ?> <br>
-                            </p>							
+                            </p>			
+                                <div class="modal fade" id="box3" role="dialog">
+                                    <div class="modal-dialog modal-lg">
+                                    
+                                    <!-- Modal content-->
+                                    <br><br><br><br>
+                                    <div class="modal-content text-center">
+                                        <div class="modal-header" style="font-size:5px">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        </div>
+                                        <div class="text-center">
+                                            <br><br>
+                                        <h3 class="modal-title"><p style="font-size:35px" ><?php echo $title; ?></p></h3>
+                                        <br>
+                                        </div>
+                                        <div class="modal-body">
+                                        <img class="img-fluid" src="img/islandhopping.jpg" alt="">
+                                        <br><br>
+                                        <p style="color:black; font-size:15px;">Location: <?php echo $location ?> <br>
+                                            Duration: <?php echo $duration ?> Days <br>
+                                            <?php echo $memo ?> <br></p>
+                                        </div>
+                                        <div class="modal-footer">
+                                        <a href="payment.php?book_package=<?php echo $package_id ?>"><button name="book" class="btn btn-warning">Book</button></a>
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                                    
+                                    </div>
+                                </div>						
                         </div>						
                     </div>
                     <div class="col-lg-4 col-md-6 "> <!-- Column 4 Travel Package -->
-                        <div class="single-feature mb-30">
+                        <div class="single-feature mb-30" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#box4">
                             <div class="title d-flex flex-row pb-20">
                                 <span class="lnr lnr-license"></span>
                                 <?php 
@@ -162,11 +251,40 @@
                                 Location: <?php echo $location ?> <br>
                                 Duration: <?php echo $duration ?> Days <br>
                                 <?php echo $memo ?> <br>
-                            </p>							
+                            </p>	
+                                <div class="modal fade" id="box4" role="dialog">
+                                    <div class="modal-dialog modal-lg">
+                                    
+                                    <!-- Modal content-->
+                                    <br><br><br><br>
+                                    <div class="modal-content text-center">
+                                        <div class="modal-header" style="font-size:5px">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        </div>
+                                        <div class="text-center">
+                                            <br><br>
+                                        <h3 class="modal-title"><p style="font-size:35px" ><?php echo $title; ?></p></h3>
+                                        <br>
+                                        </div>
+                                        <div class="modal-body">
+                                        <img class="img-fluid" src="img/islandhopping.jpg" alt="">
+                                        <br><br>
+                                        <p style="color:black; font-size:15px;">Location: <?php echo $location ?> <br>
+                                            Duration: <?php echo $duration ?> Days <br>
+                                            <?php echo $memo ?> <br></p>
+                                        </div>
+                                        <div class="modal-footer">
+                                        <a href="payment.php?book_package=<?php echo $package_id ?>"><button name="book" class="btn btn-warning">Book</button></a>
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                                    
+                                    </div>
+                                </div>								
                         </div>							
                     </div>
                     <div class="col-lg-4 col-md-6 "> <!-- Column 5 Travel Package -->
-                        <div class="single-feature mb-30">
+                        <div class="single-feature mb-30" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#box5">
                             <div class="title d-flex flex-row pb-20">
                                 <span class="lnr lnr-license"></span>
                                 <?php 
@@ -182,11 +300,40 @@
                                 Location: <?php echo $location ?> <br>
                                 Duration: <?php echo $duration ?> Days <br>
                                 <?php echo $memo ?> <br>
-                            </p>							
+                            </p>	
+                                <div class="modal fade" id="box5" role="dialog">
+                                    <div class="modal-dialog modal-lg">
+                                    
+                                    <!-- Modal content-->
+                                    <br><br><br><br>
+                                    <div class="modal-content text-center">
+                                        <div class="modal-header" style="font-size:5px">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        </div>
+                                        <div class="text-center">
+                                            <br><br>
+                                        <h3 class="modal-title"><p style="font-size:35px" ><?php echo $title; ?></p></h3>
+                                        <br>
+                                        </div>
+                                        <div class="modal-body">
+                                        <img class="img-fluid" src="img/islandhopping.jpg" alt="">
+                                        <br><br>
+                                        <p style="color:black; font-size:15px;">Location: <?php echo $location ?> <br>
+                                            Duration: <?php echo $duration ?> Days <br>
+                                            <?php echo $memo ?> <br></p>
+                                        </div>
+                                        <div class="modal-footer">
+                                        <a href="payment.php?book_package=<?php echo $package_id ?>"><button name="book" class="btn btn-warning">Book</button></a>
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                                    
+                                    </div>
+                                </div>								
                         </div>							
                     </div>
                     <div class="col-lg-4 col-md-6 "> <!-- Column 6 Travel Package -->
-                        <div class="single-feature mb-30">
+                        <div class="single-feature mb-30" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#box6">
                             <div class="title d-flex flex-row pb-20">
                                 <span class="lnr lnr-license"></span>
                                 <?php 
@@ -202,7 +349,36 @@
                                 Location: <?php echo $location ?> <br>
                                 Duration: <?php echo $duration ?> Days <br>
                                 <?php echo $memo ?> <br>
-                            </p>							
+                            </p>		
+                                <div class="modal fade" id="box6" role="dialog">
+                                    <div class="modal-dialog modal-lg">
+                                    
+                                    <!-- Modal content-->
+                                    <br><br><br><br>
+                                    <div class="modal-content text-center">
+                                        <div class="modal-header" style="font-size:5px">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        </div>
+                                        <div class="text-center">
+                                            <br><br>
+                                        <h3 class="modal-title"><p style="font-size:35px" ><?php echo $title; ?></p></h3>
+                                        <br>
+                                        </div>
+                                        <div class="modal-body">
+                                        <img class="img-fluid" src="img/islandhopping.jpg" alt="">
+                                        <br><br>
+                                        <p style="color:black; font-size:15px;">Location: <?php echo $location ?> <br>
+                                            Duration: <?php echo $duration ?> Days <br>
+                                            <?php echo $memo ?> <br></p>
+                                        </div>
+                                        <div class="modal-footer">
+                                        <a href="payment.php?book_package=<?php echo $package_id ?>"><button name="book" class="btn btn-warning">Book</button></a>
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                                    
+                                    </div>
+                                </div>							
                         </div>							
                     </div>																					
                 </div>

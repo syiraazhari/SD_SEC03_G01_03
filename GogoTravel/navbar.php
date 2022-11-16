@@ -45,7 +45,6 @@
 										echo "
 										<li><a href='main.php'>Home</a></li>				
 										<li><a href='packages.php'>Packages</a></li>
-										<li><a href='gallery.php'>Gallery</a></li>
 										<li><a href='about.php'>About</a></li>	
 										<li><a href='faq.php'>Faq</a></li>
 										<li><a href='contact.php'>Contact</a></li>";
@@ -55,7 +54,6 @@
 										<li><a href='main.php'>Home</a></li>				
 										<li><a href='packages.php'>Packages</a></li>
 										<li><a href='#'>Bookings</a></li>
-										<li><a href='gallery.php'>Gallery</a></li>
 										<li><a href='about.php'>About</a></li>	
 										<li><a href='faq.php'>Faq</a></li>
 										<li><a href='contact.php'>Contact</a></li>";
