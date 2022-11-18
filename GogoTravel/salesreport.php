@@ -61,7 +61,7 @@
 
 <hr>
      <div class="row">
-        <div class="col-sx-12">
+        <div class="container col-lg-6">
             <?php
             if(isset($_POST['submit']))
             {
