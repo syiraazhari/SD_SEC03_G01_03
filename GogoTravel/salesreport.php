@@ -100,6 +100,10 @@
         <?php
             $sql = "SELECT * FROM  booking";
             $result = mysqli_query($conn, $sql);
+            while($row=mysqli_fetch_array($result))
+            {
+                echo $row['package_id'];
+            }
         ?>
     </body>
  
