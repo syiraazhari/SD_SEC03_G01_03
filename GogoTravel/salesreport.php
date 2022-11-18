@@ -63,7 +63,7 @@
      <div class="row">
         <div class="col-sx-12">
             <?php
-            if(isser($_POST['submit']))
+            if(isset($_POST['submit']))
             {
                 $fdate=$_POST['fdate'];
                 $tdate=$_POST['tdate'];
