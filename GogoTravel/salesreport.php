@@ -32,7 +32,6 @@
             <th style="text-align: center">Package ID</th>
             <th style="text-align: center">Title</th>
             <th style="text-align: center">Price</th>
-            <th style="text-align: center">Quantity</th>
             <th style="text-align: center">Sales</th>
         </tr>
         </thead>
@@ -45,7 +44,6 @@
                 $package_id=$row[0];  
                 $title=$row[1];  
                 $price=$row[2];
-                $quantity=$row[3];
                 $sales=$row[3];
             
         ?>
@@ -53,7 +51,6 @@
             <td style="text-align: center"><br><?php echo $package_id;?></td>  
             <td style="text-align: center"><br><?php echo $title;?></td>
             <td style="text-align: center"><br><?php echo $price;?></td>
-            <td style="text-align: center"><br><?php echo $quantity;?></td>
             <td style="text-align: center"><br><?php echo $sales;?></td>
         <?php } ?>
         
