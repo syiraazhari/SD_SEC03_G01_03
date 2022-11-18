@@ -92,6 +92,7 @@
         <tr>
             <th>Package ID</th>
             <th>Title</th>
+            <th>Quantity</th>
             <th>Sales</th>
         </tr>
         </thead>
