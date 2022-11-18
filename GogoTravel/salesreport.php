@@ -29,10 +29,10 @@
         <table class="table table-bordered table-hover table-striped" style="table-layout: fixed">
         <thead>
         <tr>
-            <th>Package ID</th>
-            <th>Title</th>
-            <th>Quantity</th>
-            <th>Sales</th>
+            <th style="text-align: center">Package ID</th>
+            <th style="text-align: center">Title</th>
+            <th style="text-align: center">Quantity</th>
+            <th style="text-align: center">Sales</th>
         </tr>
         </thead>
 
@@ -47,8 +47,8 @@
             
         ?>
         <tr>
-            <td><br><?php echo $package_id;  ?></td>  
-            <td><br><?php echo $title;  ?></td>
+            <td style="text-align: center"><br><?php echo $package_id;  ?></td>  
+            <td style="text-align: center"><br><?php echo $tit;  ?></td>
         <?php } ?>
         
         </table>
