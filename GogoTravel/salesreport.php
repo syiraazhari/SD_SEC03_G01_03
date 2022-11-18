@@ -28,16 +28,16 @@
         <table class="table table-bordered table-hover table-striped" style="table-layout: fixed">  
         <thead>
         <tr>  
-            <th style="text-align: center" class="col-lg-1">From Date :</th>
+            <th style="text-align: center">From Date :</th>
             <td><input type="date" name="fdate" class="form-control" id="fdate"></td>
 
-            <th style="text-align: center" class="col-lg-1">To Date :</th>
+            <th style="text-align: center">To Date :</th>
             <td><input type="date" name="tdate" class="form-control" id="tdate"></td>
 
-            <th style="text-align: center" class="col-lg-2">Request Type :</th>
+            <th style="text-align: center">Request Type :</th>
             <td><input type="radio" name="requesttype" value="mtwise" checked="true">Month wise
             <input type="radio" name="requesttype" value="yrwise">Year wise</td>
-            <td><button class="btn-primary btn" type="submit" name="submit">Submit</button></td>
+            <td><button class="btn-primary btn" type="submit" name="submit">Check</button></td>
         </tr>  
         </thead>
 
