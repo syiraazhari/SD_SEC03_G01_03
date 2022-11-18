@@ -102,9 +102,12 @@
             $result = mysqli_query($conn, $sql);
             while($row=mysqli_fetch_array($result))
             {
-                echo $row['package_id'];
-            }
         ?>
+                <tr>
+                <td>echo $row['package_id'];</td>
+                </tr>
+            }
+        
         </table>
     </body>
  
