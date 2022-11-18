@@ -48,6 +48,13 @@
                     <input type="radio" name="requesttype" value="yrwise">Year wise
     	        </td>
             </tr>
+
+            <tr>
+                <th scope="row"></th>
+                <td width="73%">
+                <button class="btn-primary btn" type="submit" name="submit">Submit</button>
+                </td>
+            </tr>
 </body>
  
 </html>>
