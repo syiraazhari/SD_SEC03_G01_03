@@ -44,11 +44,16 @@
                 $package_id=$row[0];  
                 $title=$row[1];  
                 $price=$row[2];
+                $quantity=$row[3];
+                $sales=$row[3];
             
         ?>
         <tr>
             <td style="text-align: center"><br><?php echo $package_id;?></td>  
             <td style="text-align: center"><br><?php echo $title;?></td>
+            <td style="text-align: center"><br><?php echo $price;?></td>
+            <td style="text-align: center"><br><?php echo $quantity;?></td>
+            <td style="text-align: center"><br><?php echo $sales;?></td>
         <?php } ?>
         
         </table>
