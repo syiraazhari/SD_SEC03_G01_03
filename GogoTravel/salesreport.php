@@ -27,28 +27,28 @@
 
         <table class="table table-bordered table-hover table-striped" style="table-layout: fixed">  
         <tr>
-        <th style="text-align: center" class="col-lg-1">From Date :</th>
+        <th>From Date :</th>
         <input type="date" name="fdate" class="form-control" id="fdate">
     	</td>
         </tr>
  
         <tr>
-        <th style="text-align: center" class="col-lg-1">To Date :</th>
+        <th>To Date :</th>
     	<input type="date" name="tdate" class="form-control" id="tdate"></td>
         </tr>
         
         <tr>
-        <th style="text-align: center" class="col-lg-1">Request Type :</th>
+        <th>Request Type :</th>
         <input type="radio" name="requesttype" value="mtwise" checked="true">Month wise
         <input type="radio" name="requesttype" value="yrwise">Year wise</td>
         </tr>
 
         <tr>
-        <th style="text-align: center" class="col-lg-1"></th>
+        <th></th>
     	<button class="btn-primary btn" type="submit" name="submit">Check</button>
         </tr>
         </table>
-        
+
 </div>
 </body>
 </html>
