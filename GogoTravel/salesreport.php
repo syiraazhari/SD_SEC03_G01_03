@@ -44,8 +44,12 @@
                 $package_id=$row[0];  
                 $title=$row[1];  
                 $price=$row[2];
-            }
+            
         ?>
+        <tr>
+            <td style="text-align: center"><br><?php echo $package_id;  ?></td>  
+            <td style="text-align: center"><br><?php echo $title;  ?></td>
+        <?php } ?>
         
         </table>
     </body>
