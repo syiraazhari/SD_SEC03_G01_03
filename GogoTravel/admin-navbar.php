@@ -36,7 +36,8 @@
 							  </button>
 
 							  <div class="collapse navbar-collapse justify-content-end align-items-center" id="navbarSupportedContent">
-							    <ul class="navbar-nav">				
+							    <ul class="navbar-nav">		
+									<li><a href="salesreport.php">Sales</a></li>		
 									<li><a href="admin-packages.php">Service</a></li>
 									<li><a href="staffcont.php">Staff</a></li>
 									<li><a href="view_user.php">User</a></li>	
