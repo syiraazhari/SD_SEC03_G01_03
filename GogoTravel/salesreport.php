@@ -25,100 +25,38 @@
 </div>
 
 <div class="container col-lg-6">
-    <form name="bwdatesdata" action="" method="post" action=""> 
-        <table class="table table-bordered table-hover table-striped" style="table-layout: fixed">
-            <tr>
-                <th scope="row">From Date :</th>
-                <td width="73%">
-                    <input type="date" name="fdate" class="form-control" id="fdate">
-    	        </td>
-            </tr>
-
-            <tr>
-                <th scope="row">To Date :</th>
-                <td width="73%">
-                    <input type="date" name="tdate" class="form-control" id="tdate">
-    	        </td>
-            </tr>
-
-            <tr>
-                <th scope="row">Request Type :</th>
-                <td width="73%">
-                    <input type="radio" name="requesttype" value="mtwise" checked="true">Month wise
-                    <input type="radio" name="requesttype" value="yrwise">Year wise
-    	        </td>
-            </tr>
-
-            <tr>
-                <th scope="row"></th>
-                <td width="73%">
-                <button class="btn-primary btn" type="submit" name="submit">Submit</button>
-                </td>
-            </tr>
-        </table>
-    </form>
-</div>
-
-<hr>
-     <div class="row">
-        <div class="container col-lg-6">
-            <?php
-            if(isset($_POST['submit']))
-            {
-                $fdate=$_POST['fdate'];
-                $tdate=$_POST['tdate'];
-                $rtype=$_POST['requesttype'];
-            }
-            ?>
-
-            <?php
-            if($rtype=='mtwise')
-            {
-                $month1=strtotime($fdate);
-                $month2=strtotime($tdate);
-                $m1=date("F",$month1);
-                $m2=date("F",$month2);
-                $y1=date("Y",$month1);
-                $y2=date("Y",$month2);
-            }
-            ?>
-
-            <h4 align="center">Sales Report Month Wise</h4>
-            <h4 align="center" style="color:blue">Sales Report  from <?php echo $m1."-".$y1;?> to <?php echo $m2."-".$y2;?></h4>
-     <hr>
      <div class="row">
         <table class="table table-bordered table-hover table-striped" style="table-layout: fixed">
         <thead>
         <tr>
-            <th>Package ID</th>
-            <th>Title</th>
-            <th>Quantity</th>
-            <th>Sales</th>
+            <th style="text-align: center">Package ID</th>
+            <th style="text-align: center">Title</th>
+            <th style="text-align: center">Price</th>
+            <th style="text-align: center">Quantity</th>
+            <th style="text-align: center">Sales</th>
         </tr>
         </thead>
 
         <?php
-            $sql = "SELECT * FROM  booking";
+            $sql = "SELECT * FROM  packages";
             $result = mysqli_query($conn, $sql);
-            while ($row=mysqli_fetch_array($result)) {
- 
-                ?>
-                <tbody>
-                <tr>
-                <td><?php echo $row['package_id'];?></td>
-                <td><?php  echo $row['lmonth']."/".$row['lyear'];?></td>
-                <td><?php  echo $total=$row['SellingPrice']*$row['Quantity'];?></td>
-                </tr>
-                <?php
-                $ftotal+=$total;
-                $cnt++;
-                }?>
-                <tr>
-                <td colspan="2" align="center">Total </td>
-                <td><?php  echo $ftotal;?></td>
-                 </tr>             
-                </tbody>
-                </table>
-                <?php ?>
+
+            while($row=mysqli_fetch_array($result)){
+                $package_id=$row[0];  
+                $title=$row[1];  
+                $price=$row[2];
+                $quantity=$row[3];
+                $sales=$row[3];
+            
+        ?>
+        <tr>
+            <td style="text-align: center"><br><?php echo $package_id;?></td>  
+            <td style="text-align: center"><br><?php echo $title;?></td>
+            <td style="text-align: center"><br><?php echo $price;?></td>
+            <td style="text-align: center"><br><?php echo $quantity;?></td>
+            <td style="text-align: center"><br><?php echo $sales;?></td>
+        <?php } ?>
+        
+        </table>
     </body>
 </html>
