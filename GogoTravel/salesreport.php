@@ -37,8 +37,14 @@
         </thead>
 
         <?php
-            $sql = "SELECT * FROM  booking";
+            $sql = "SELECT * FROM  packages";
             $result = mysqli_query($conn, $sql);
+
+            while($row=mysqli_fetch_array($result)){
+                $package_id=$row[0];  
+                $title=$row[1];  
+                $price=$row[2];
+            }
         ?>
         
         </table>
