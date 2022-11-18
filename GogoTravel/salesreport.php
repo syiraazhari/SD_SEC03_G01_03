@@ -3,8 +3,6 @@
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
-<!DOCTYPE html>
 <html>  
 <head lang="en">  
     <meta charset="UTF-8">  
@@ -62,7 +60,42 @@
 </div>
 
 <hr>
+     <div class="row">
+        <div class="col-sx-12">
+            <?php
+            if(isser($_POST['submit']))
+            {
+                $fdate=$_POST['fdate'];
+                $tdate=$_POST['tdate'];
+                $rtype=$_POST['requesttype'];
+            }
+            ?>
 
-</body>
+            <?php
+            if($rtype=='mtwise')
+            {
+                $month1=strtotime($fdate);
+                $month2=strtotime($tdate);
+                $m1=date("F",$month1);
+                $m2=date("F",$month2);
+                $y1=date("Y",$month1);
+                $y2=date("Y",$month2);
+            }
+            ?>
+
+            <h4 align="center">Sales Report Month Wise</h4>
+            <h4 align="center" style="color:blue">Sales Report  from <?php echo $m1."-".$y1;?> to <?php echo $m2."-".$y2;?></h4>
+     <hr>
+     <div class="row>
+        <table class="table table-bordered table-hover table-striped" style="table-layout: fixed">
+        <thead>
+        <tr>
+            <th>S.NO</th>
+            <th>Month / Year </th>
+            <th>Sales</th>
+        </tr>
+        </thead>
+        </table>
+    </body>
  
 </html>>
