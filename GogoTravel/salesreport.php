@@ -31,6 +31,7 @@
         <tr>
             <th style="text-align: center">Package ID</th>
             <th style="text-align: center">Title</th>
+            <th style="text-align: center">Price</th>
             <th style="text-align: center">Quantity</th>
             <th style="text-align: center">Sales</th>
         </tr>
