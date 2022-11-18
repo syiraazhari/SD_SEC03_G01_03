@@ -26,7 +26,7 @@
     <h1 align="center"><br>Sales Report</h1>
 
     <form name="bwdatesdata" action="" method="post" action="">
-        <table width="100%" height="117"  border="0">
+            <table class="table table-bordered table-hover table-striped" style="table-layout: fixed">  
         <tr>
         <th width="27%" height="63" scope="row">From Date :</th>
         <td width="73%">
