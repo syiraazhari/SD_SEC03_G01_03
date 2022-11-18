@@ -2,16 +2,17 @@
 include 'config.php';
 include 'navbar.php';
 
-$staff_id = $_GET['update_staff'];
-$select = mysqli_query($conn, "SELECT * FROM user WHERE id = '$staff_id'");
+$user_id = $_GET['update_user'];
+$select = mysqli_query($conn, "SELECT * FROM user WHERE id = '$user_id'");
 
         while($row=mysqli_fetch_array($select))
         {  
-            $staff_fullname=$row[2];
-            $staff_username=$row[1];  
-            $staff_password=$row[3];  
-            $staff_email=$row[4];  
+            $user_fullname=$row[2];
+            $user_username=$row[1];  
+            $user_password=$row[3];  
+            $user_email=$row[4];  
         }
+        
 
 if(isset($_POST['update_staff'])){
 
@@ -20,7 +21,7 @@ if(isset($_POST['update_staff'])){
     $update_email = $_POST['update_email'];
     $update_password = $_POST['update_password'];
 
-    mysqli_query($conn, "UPDATE user SET password = '$update_password', name = '$update_name', username = '$update_username', email = '$update_email' WHERE id = '$staff_id'");
+    mysqli_query($conn, "UPDATE user SET password = '$update_password', name = '$update_name', username = '$update_username', email = '$update_email' WHERE id = '$user_id'");
 
     session_destroy();
     header("location:admin-view_staff.php");
@@ -55,7 +56,7 @@ if(isset($_POST['update_staff'])){
                 <div class="section-top-border">
                     <div class="row">
                         <div class="col-lg-10 col-md-10">
-                            <h3 class="mb-30">Edit Staff Profile</h3>
+                            <h3 class="mb-30">Edit User Profile</h3>
 
                             <div class="col-md-3">
                                 <div class="text-center">
@@ -76,27 +77,27 @@ if(isset($_POST['update_staff'])){
                             <form action="#" method="POST">
                                 <div class="mt-10">
                                     <label class="col-md-3">Staff ID:</label>
-                                    <input type="text" class="form-control" placeholder="ID" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Staff ID'" value="<?php echo $staff_id; ?>"required>
+                                    <input type="text" class="form-control" placeholder="ID" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Staff ID'" value="<?php echo $user_id; ?>"required>
                                 </div>
                                 <br>
                                 <div class="mt-10">
                                     <label class="col-md-3">Full Name:</label>
-                                    <input type="text" name="update_name" class="form-control" placeholder="Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Full Name'" value="<?php echo $staff_fullname; ?>"required>
+                                    <input type="text" name="update_name" class="form-control" placeholder="Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Full Name'"  value="<?php echo $user_fullname; ?> "required>
                                 </div>
                                 <br>
                                 <div class="mt-10">
                                     <label class="col-md-3">Username:</label>
-                                    <input type="text" name="update_username" class="form-control" placeholder="Username" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Username'" value="<?php echo $staff_username; ?>" required>
+                                    <input type="text" name="update_username" class="form-control" placeholder="Username" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Username'"  value="<?php echo $user_username; ?>" required>
                                 </div>
                                 <br>
                                 <div class="mt-10">
                                     <label class="col-md-3">E-mail:</label>
-                                    <input type="email" name="update_email" class="form-control" placeholder="Email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'E-mail'" value="<?php echo $staff_email; ?>" required>
+                                    <input type="email" name="update_email" class="form-control" placeholder="Email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'E-mail'"  value="<?php echo $user_email; ?>" required>
                                 </div>
                                 <br>
                                 <div class="mt-10">
                                     <label class="col-md-3">Password:</label>
-                                    <input type="password" name="update_password" placeholder="New password" class="form-control" value="<?php echo $staff_password; ?>">
+                                    <input type="password" name="update_password" placeholder="New password" class="form-control"  value="<?php echo $user_password; ?>" >
                                 </div>
                                 <br>            
                                     <label class="col-md-3"></label>

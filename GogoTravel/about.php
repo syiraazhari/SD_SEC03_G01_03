@@ -14,7 +14,7 @@
 		<!-- meta character set -->
 		<meta charset="UTF-8">
 		<!-- Site Title -->
-		<title>Adventure</title>
+		<title>About Us</title>
 
 		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet"> 
 			<!--
@@ -35,20 +35,21 @@
 			?>
 
 			<!-- Start about Area -->
-			<section class="section-gap info-area" id="about">
+			<br><br>
+			<section class="info-area" id="about">
 				<div class="container">
 					<div class="row d-flex justify-content-center">
 						<div class="menu-content pb-40 col-lg-8">
 							<div class="title text-center">
-								<h1 class="mb-10">Why Choose Us Your Fitness Builder</h1>
-								<p>Who are in extremely love with eco friendly system.</p>
+								<h1 class="mb-10">Why Choose Us Your Travel Provider</h1>
+								<p>Who are in extremely love with budget travelling.</p>
 							</div>
 						</div>
 					</div>					
 					<div class="single-info row mt-40">
 						<div class="col-lg-6 col-md-12 mt-120 text-center no-padding info-left">
-							<div class="info-thumb">
-								<img src="img/about-img.jpg" class="img-fluid" alt="">
+							<div class="menu-content">
+								<img src="img/about_us.jpg" class="img-fluid" alt="">
 							</div>
 						</div>
 						<div class="col-lg-6 col-md-12 no-padding info-rigth">
@@ -77,15 +78,7 @@
 			
 			
 			
-			<!-- Start logo Area -->
-			<section class="logo-area">
-				<div class="container">
-					<div class="row">
-						
-					</div>
-				</div>	
-			</section>
-			<!-- End logo Area -->
+			<br><br><br><br>
 				
 			<?php
 			include("footer.php")

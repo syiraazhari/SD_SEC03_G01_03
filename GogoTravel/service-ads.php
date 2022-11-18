@@ -129,7 +129,7 @@
                         <td><br><?php echo $price;  ?> <br><br></td> 
                         <td style="text-align: center" ><br><?php echo $memo;?></td>  
                         <td style="text-align: center"><br><a href="delete-advert.php?del_advert=<?php echo $package_id ?>"><button class="btn btn-danger">Delete</button></a>
-                                                <a href="service-ads-edit.php?update_package=<?php echo $package_id ?>"><button class="btn btn-warning">Update</button></a></td>    
+                                                <a href="service-ads-edit.php?update_advert=<?php echo $package_id ?>"><button class="btn btn-warning">Update</button></a></td>    
                     </tr>
                 <?php } ?> 
                 </table>

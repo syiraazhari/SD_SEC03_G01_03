@@ -10,8 +10,23 @@
 	if(isset($_POST['forgotpass'])){
 		$email = $_POST['email'];
 
+		$select = mysqli_query($conn, "SELECT * FROM user WHERE email = '$email'");
+
+        while($row=mysqli_fetch_array($select))
+        {  
+            $staff_fullname=$row[2];
+            $staff_username=$row[1];  
+            $staff_password=$row[3];  
+            $staff_email=$row[4];  
+        }
+
 		$code = uniqid(true);
 		$query = mysqli_query($conn, "INSERT INTO resetpassword(email, reset_code) VALUES('$email', '$code')");
+
+		$reset_link = "localhost/SD_SEC03_G01_03/GogoTravel/resetpassconfirm.php?code=".$code;
+		$message = file_get_contents("forgotpass_template.php");
+		$message = str_replace("resetlink","{$reset_link}",$message);
+		$message = str_replace("placeholder","{$staff_username}",$message);
 
 		if(!$query){
 			exit("error");
@@ -19,7 +34,10 @@
 
 		//Instantiation and passing `true` enables exceptions
         $mail = new PHPMailer(true);
- 
+		$mail -> AddEmbeddedImage('img/reset.png','trademark');
+		$mail -> AddEmbeddedImage('img/email.png','logo');
+
+
         try {
             //Enable verbose debug output
             $mail->SMTPDebug = 0;//SMTP::DEBUG_SERVER;
@@ -57,7 +75,7 @@
             $verification_code = substr(number_format(time() * rand(), 0, '', ''), 0, 6);
 
             $mail->Subject = 'Password Reset';
-            $mail->Body    = "<p>Your password reset link is: <a href=localhost/SD_SEC03_G01_03/GogoTravel/resetpassconfirm.php?code=$code> HERE</a>";
+            $mail->Body    = $message; //"<p>Your password reset link is: <a href=localhost/SD_SEC03_G01_03/GogoTravel/resetpassconfirm.php?code=$code> HERE</a>";
  
             $mail->send();
 
@@ -111,7 +129,7 @@
 		<div class="container col-lg-3">
 			<div class="row d-flex justify-content-center" style="background-color: rgb(5, 5, 5);">
 				<div class="col-md-6 text-center mb-3 align-items-center">
-					<h2 class="heading-section" style="color : rgb(235, 226, 226)">Password Reset</h2>
+					<h2 img src="cid:trademark" class="heading-section" style="color : rgb(235, 226, 226)"><br>Password Reset</h2>
 				</div>
 			</div>
 			<div class="row d-flex justify-content-center" style="background-color: rgb(243, 245, 250);">

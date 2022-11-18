@@ -18,6 +18,7 @@
 			<link rel="stylesheet" href="css/owl.carousel.css">
 			<link rel="stylesheet" href="css/main.css">
 			<link rel="stylesheet" href="css/transition.css">
+			<script src="https://js.stripe.com/v3/"></script>
 
 		</head>
 		<body>
@@ -47,10 +48,10 @@
 				{  $package_id=$row[0];  $title=$row[1];  $info=$row[3];  $price=$row[2];  $memo=$row[4];}   
 
 
-				if(isset($_POST['confirm'])){
+				
 					$query = "INSERT INTO booking(name, email, package_id, title, booking_number, price) VALUES('$name', '$email', '$package_id', '$title', '$book_no', '$price')";
 					$book_result = mysqli_query($conn, $query);
-				}
+				
 			
             ?> 
 
@@ -60,7 +61,7 @@
 				<div class="container col-lg-4">
 					<br><br>
 					<div class="row d-flex justify-content-center" style="background-color: rgb(5, 5, 5);">
-						<div class="col-md-10 text-center mb-3 align-items-center">
+						<div class="col-md-10 text-center mb-5 align-items-center">
 							<img src="img/payment.png" alt="">
 						</div><br><br>
 					</div>
@@ -73,6 +74,7 @@
 										<h3 class="mb-4" style="font-size:30px">Payment Details</h3>
 									</div>
 								</div>
+								<div id="paymentResponse"></div>
 
 								<form action="payment_done.php" class="payment" method="POST">
 									<div class="form-group mb-4">
@@ -100,7 +102,7 @@
 										<b style="font-size:20px">RM<?php echo $price; ?>.00</b>
 									</div>
 									<div class="form-group mb-4">
-									<a href="payment_done.php?book_package=<?php echo $package_id ?>"><button name="confirm" class="btn btn-warning">Confirm</button></a>
+									<button id="payButton" name="payButton" class="btn btn-warning">Confirm</button>
 									</div>   
 								</form>	   					    
 							</div>
@@ -108,6 +110,54 @@
 					</div>
 				</div>
 			</section>
+			<script>
+					var buyBtn = document.getElementById('payButton');
+					var responseContainer = document.getElementById('paymentResponse');    
+					// Create a Checkout Session with the selected product
+					var createCheckoutSession = function (stripe) {
+						return fetch("payment_done.php", {
+							method: "POST",
+							headers: {
+								"Content-Type": "application/json",
+							},
+							body: JSON.stringify({
+								checkoutSession: 1,
+								Name:"<?php echo $title; ?>",
+								ID:"<?php echo $book_no; ?>",
+								Price:"<?php echo $price; ?>",
+								Currency:"myr",
+							}),
+						}).then(function (result) {
+							return result.json();
+						});
+					};
+
+					// Handle any errors returned from Checkout
+					var handleResult = function (result) {
+						if (result.error) {
+							responseContainer.innerHTML = '<p>'+result.error.message+'</p>';
+						}
+						buyBtn.disabled = false;
+						buyBtn.textContent = 'Buy Now';
+					};
+
+					// Specify Stripe publishable key to initialize Stripe.js
+					var stripe = Stripe('<?php echo STRIPE_PUBLISHABLE_KEY; ?>');
+
+					buyBtn.addEventListener("click", function (evt) {
+						buyBtn.disabled = true;
+						buyBtn.textContent = 'Please wait...';
+						createCheckoutSession().then(function (data) {
+							if(data.sessionId){
+								stripe.redirectToCheckout({
+									sessionId: data.sessionId,
+								}).then(handleResult);
+							}else{
+								handleResult(data);
+							}
+						});
+					});
+					</script>
 
 
 			<script src="js/vendor/jquery-2.2.4.min.js"></script>

@@ -2,7 +2,17 @@
 include 'config.php';
 include 'navbar.php';
 
-$ad_id = $_GET['update_package'];
+$pkg_id = $_GET['update_package'];
+$select = mysqli_query($conn, "SELECT * FROM packages WHERE package_id = '$pkg_id'");
+
+        while($row=mysqli_fetch_array($select))
+        {  
+            $pkg_title=$row[1];
+            $pkg_price=$row[2];  
+            $pkg_memo=$row[3];  
+            $pkg_duration=$row[4]; 
+            $pkg_location=$row[5];   
+        }
 
 if(isset($_POST['update-packages'])){
 
@@ -12,7 +22,7 @@ if(isset($_POST['update-packages'])){
     $update_duration = $_POST['update_duration'];
     $update_location = $_POST['update_location'];
 
-    mysqli_query($conn, "UPDATE packages SET title = '$update_title', price = '$update_price', memo = '$update_memo' , duration = '$update_duration' , location = '$update_location' WHERE package_id = '$ad_id'");
+    mysqli_query($conn, "UPDATE packages SET title = '$update_title', price = '$update_price', memo = '$update_memo' , duration = '$update_duration' , location = '$update_location' WHERE package_id = '$pkg_id'");
 
     session_destroy();
     header("location:services.php");
@@ -65,27 +75,27 @@ if(isset($_POST['update-packages'])){
                         </div>
                         <div>
                                 <label class="col-md-3">Package ID:</label>
-                                <input type="number" id="id" name="ad_id" class="form-control" placeholder="Package ID" value="<?php echo $ad_id; ?>" required>
+                                <input type="number" id="id" name="ad_id" class="form-control" placeholder="Package ID" value="<?php echo $pkg_id; ?>" required>
                         </div>
                         <div>
                                 <label class="col-md-3"><br>Title:</label>
-                                <input type="text" id="title" name="update_title" class="form-control" placeholder="Package Title"required>
+                                <input type="text" id="title" name="update_title" class="form-control" placeholder="Package Title" value="<?php echo $pkg_title; ?>"required>
                         </div>	
                         <div>
                                 <label class="col-md-3"><br>Price:</label>
-                                <input type="number" id="price" name="update_price" class="form-control" placeholder="Package Price"required>
+                                <input type="number" id="price" name="update_price" class="form-control" placeholder="Package Price" value="<?php echo $pkg_price; ?>" required>
                         </div>	
                         <div>
                                 <label class="col-md-6"><br>Memo:</label>
-                                <input style="height:200px" type="text" id="memo" name="update_memo" class="form-control" placeholder="Package Short Description"required>
+                                <input style="height:200px" type="text" id="memo" name="update_memo" class="form-control" placeholder="Package Short Description" value="<?php echo $pkg_memo; ?>" required>
                         </div>	
                         <div>
                                 <label class="col-md-2"><br>Duration:</label>
-                                <input type="text" id="memo" name="update_duration" class="form-control" placeholder="Package Duration"required>
+                                <input type="text" id="memo" name="update_duration" class="form-control" placeholder="Package Duration" value="<?php echo $pkg_duration; ?>" required>
                         </div>	
                         <div>
                                 <label class="col-md-2"><br>Location:</label>
-                                <input type="text" id="memo" name="update_location" class="form-control" placeholder="Package Location"required>
+                                <input type="text" id="memo" name="update_location" class="form-control" placeholder="Package Location" value="<?php echo $pkg_location; ?>" required>
                         </div>	
                         <div class="col-md-8">
                             <br>

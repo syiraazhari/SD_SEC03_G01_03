@@ -103,8 +103,8 @@
 	<section class="section-gap">
 		<div class="container col-lg-3">
 			<div class="row d-flex justify-content-center" style="background-color: rgb(5, 5, 5);">
-				<div class="col-md-6 text-center mb-3 align-items-center">
-					<h2 class="heading-section" style="color : rgb(235, 226, 226)">Create An Account</h2>
+				<div class="col-md-14 mb-3">
+					<br><img src="img/signup.png">
 				</div>
 			</div>
 			<div class="row d-flex justify-content-center" style="background-color: rgb(243, 245, 250);">

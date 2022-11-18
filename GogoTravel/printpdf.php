@@ -1,5 +1,9 @@
-<?php
+<?php   
+                session_start();
+                include 'config.php';  
+
                 require ('fpdf181/fpdf.php');
+                
 
                 $pdf = new FPDF();
                 $pdf->AddPage();
@@ -38,5 +42,6 @@
                 $pdf->Ln(5);//Line break
                 $pdf->Cell(140, 5, '', 0, 0);
                 $pdf->Cell(50, 5, ': Signature', 0, 1, 'C');
+
                 $pdf->Output();
 ?>

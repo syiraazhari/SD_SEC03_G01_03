@@ -29,7 +29,7 @@
 		<div class="container">
 			<div class="row d-flex justify-content-center" style="background-color: rgb(5, 5, 5);">
 				<div class="col-md-6 text-center mb-5">
-					<h2 class="heading-section" style="color : rgb(235, 226, 226)"> <br> Sign-In</h2>
+					<br><img src="img/signin.png">
 				</div>
 			</div>
 			<div class="row d-flex justify-content-center" style="background-color: rgb(243, 245, 250);">

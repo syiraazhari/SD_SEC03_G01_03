@@ -53,7 +53,7 @@
 										echo "
 										<li><a href='main.php'>Home</a></li>				
 										<li><a href='packages.php'>Packages</a></li>
-										<li><a href='#'>Bookings</a></li>
+										<li><a href='booking.php'>Bookings</a></li>
 										<li><a href='about.php'>About</a></li>	
 										<li><a href='faq.php'>Faq</a></li>
 										<li><a href='contact.php'>Contact</a></li>";
@@ -62,12 +62,16 @@
 										echo "
 										<li><a href='services.php'>Service</a></li>
 										<li><a href='admin-view_staff.php'>Staff</a></li>
-										<li><a href='admin-view_user.php'>User</a></li>	";
+										<li><a href='view_user.php'>User</a></li>
+										<li><a href='view_payment.php'>Payments</a></li>
+										<li><a href='view_feedback.php'>Feedback</a></li>	";
 									}
 									else if($usertype == 'staff'){
 										echo "
 										<li><a href='services.php'>Service</a></li>
-										<li><a href='staff-view_user.php'>Users</a></li>	";
+										<li><a href='view_user.php'>Users</a></li>
+										<li><a href='view_payment.php'>Payments</a></li>
+										<li><a href='view_feedback.php'>Feedback</a></li>	";
 									}
 									?>
 										

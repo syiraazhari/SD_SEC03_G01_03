@@ -2,7 +2,16 @@
 include 'config.php';
 include 'navbar.php';
 
-$ad_id = $_GET['update_package'];
+$ad_id = $_GET['update_advert'];
+$select = mysqli_query($conn, "SELECT * FROM advert WHERE package_id = '$ad_id'");
+
+        while($row=mysqli_fetch_array($select))
+        {  
+            $ad_title=$row[1];
+            $ad_info=$row[2];  
+            $ad_price=$row[3];  
+            $ad_memo=$row[4];  
+        }
 
 if(isset($_POST['update-ads'])){
 
@@ -68,19 +77,19 @@ if(isset($_POST['update-ads'])){
                         </div>
                         <div>
                                 <label class="col-md-3"><br>Title:</label>
-                                <input type="text" id="title" name="update_title" class="form-control" placeholder="Advert Title"required>
+                                <input type="text" id="title" name="update_title" class="form-control" placeholder="Advert Title" value="<?php echo $ad_title; ?>"required>
                         </div>	
                         <div>
                                 <label class="col-md-3"><br>Info:</label>
-                                <input type="text" id="info" name="update_info" class="form-control" placeholder="Advert Info"required>
+                                <input type="text" id="info" name="update_info" class="form-control" placeholder="Advert Info" value="<?php echo $ad_info; ?>" required>
                         </div>
                         <div>
                                 <label class="col-md-3"><br>Price:</label>
-                                <input type="number" id="price" name="update_price" class="form-control" placeholder="Advert Price"required>
+                                <input type="number" id="price" name="update_price" class="form-control" placeholder="Advert Price" value="<?php echo $ad_price; ?>" required>
                         </div>	
                         <div>
                                 <label class="col-md-6"><br>Memo:</label>
-                                <input style="height:200px" type="text" id="memo" name="update_memo" class="form-control" placeholder="Advert Short Description"required>
+                                <input style="height:200px" type="text" id="memo" name="update_memo" class="form-control" placeholder="Advert Short Description" value="<?php echo $ad_memo; ?>" required>
                         </div>	
                         <div class="col-md-8">
                             <br>
