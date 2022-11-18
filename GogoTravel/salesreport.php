@@ -105,6 +105,7 @@
                 echo $row['package_id'];
             }
         ?>
+        </table>
     </body>
  
 </html>>
