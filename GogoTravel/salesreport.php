@@ -21,8 +21,10 @@
 </style>  
   
 <body>
-    <div class="table-scrol">
-        <h1 align="center"><br>Sales Report</h1>
+
+<div class="table-scrol">
+    <h1 align="center"><br>Sales Report</h1>
+</div>
 
 <div class="container col-lg-6">
     <form name="bwdatesdata" action="" method="post" action=""> 
@@ -55,6 +57,12 @@
                 <button class="btn-primary btn" type="submit" name="submit">Submit</button>
                 </td>
             </tr>
+        </table>
+    </form>
+</div>
+
+<hr>
+
 </body>
  
 </html>>
