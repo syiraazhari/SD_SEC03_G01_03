@@ -7,7 +7,7 @@
 <head lang="en">  
     <meta charset="UTF-8">  
     <link type="text/css" rel="stylesheet" href="bootstrap-3.2.0-dist\css\bootstrap.css">
-    <title>View Staff</title>  
+    <title>View Sales Report</title>  
 </head>
 <style>  
     .login-panel {  
@@ -18,51 +18,45 @@
      }  
 </style>  
   
-<body>  
-  
-<div class="table-scrol">  
-    <h1 align="center"><br>Staff Lists</h1> 
-    <h4 align="center"> <a href="admin-add_staff.php"; ><br>Add Staff</a> </h4> 
-  
+<body>
+
+<div class="table-scrol">
+    <h1 align="center"><br>Sales Report</h1>
+</div>
+
 <div class="container col-lg-6">
-    <table class="table table-bordered table-hover table-striped" style="table-layout: fixed">  
-        <thead>  
-  
-        <tr>  
-            <th style="text-align: center" class="col-lg-1">ID</th>  
-            <th style="text-align: center" class="col-lg-1">Full Name</th>
-            <th style="text-align: center" class="col-lg-2">User Details</th>    
-            <th style="text-align: center" class="col-lg-1">Action</th>  
-        </tr>  
+     <div class="row">
+        <table class="table table-bordered table-hover table-striped" style="table-layout: fixed">
+        <thead>
+        <tr>
+            <th style="text-align: center">Package ID</th>
+            <th style="text-align: center">Title</th>
+            <th style="text-align: center">Price</th>
+            <th style="text-align: center">Quantity</th>
+            <th style="text-align: center">Sales</th>
+        </tr>
         </thead>
 
-        <?php  
-          
-        include 'config.php';
-        $sql = "SELECT * FROM user WHERE usertype = 'staff'";
-        $result = mysqli_query($conn, $sql);
+        <?php
+            $sql = "SELECT * FROM  packages";
+            $result = mysqli_query($conn, $sql);
 
-        while($row=mysqli_fetch_array($result))
-        {  
-            $user_id=$row[0];  
-            $user_fullname=$row[2];
-            $user_username=$row[1];  
-            $user_password=$row[3];  
-            $user_email=$row[4];  
-        
-            $show = "<p> Username : $user_username </p>" . "<p> Email : $user_email </p>" . "<p> Password : $user_password </p>" 
+            while($row=mysqli_fetch_array($result)){
+                $package_id=$row[0];  
+                $title=$row[1];  
+                $price=$row[2];
+                $quantity=$row[3];
+                $sales=$row[3];
+            
         ?>
-    
         <tr>
-            <td style="text-align: center"><br><?php echo $user_id;  ?></td>  
-            <td style="text-align: center"><br><?php echo $user_fullname;  ?></td>
-            <td ><br><?php echo $show;  ?></td>   
-            <td style="text-align: center"><br><a href="delete-user.php?del=<?php echo $user_id ?>"><button class="btn btn-danger">Delete</button></a>
-                <a href="admin-edit-staff.php?update_staff=<?php echo $user_id ?>"><button class="btn btn-warning">Edit</button></a></td> 
-    <?php } ?>
-    </table>
-    </div>
-</div>
-</body>
- 
+            <td style="text-align: center"><br><?php echo $package_id;?></td>  
+            <td style="text-align: center"><br><?php echo $title;?></td>
+            <td style="text-align: center"><br><?php echo $price;?></td>
+            <td style="text-align: center"><br><?php echo $quantity;?></td>
+            <td style="text-align: center"><br><?php echo $sales;?></td>
+        <?php } ?>
+        
+        </table>
+    </body>
 </html>
