@@ -96,6 +96,31 @@
             <th>Sales</th>
         </tr>
         </thead>
+
+        <?php
+            $ret=mysqli_query($con,"select month(date) as lmonth,year(date) as lyear,
+            packages.price,booking.quantity from booking 
+            join packages on packages.package_id=booking.package_id
+            where date(booking.date) between '$fdate' and '$tdate'
+            group by lmonth,lyear");
+            $num=mysqli_num_rows($ret);  
+        ?>
+
+        <tbody>
+            <tr>
+                <td>
+                    <?php echo $row['package_id']?>
+                </td>
+                <td>
+                    <?php echo $row['title']?>
+                </td>
+                <td>
+                    <?php echo $row['quantity']?>
+                </td>
+                <td>
+                    <?php echo $total=$row['price']*$row['quantity'];?>
+                </td>
+            </td>
         </table>
     </body>
  
