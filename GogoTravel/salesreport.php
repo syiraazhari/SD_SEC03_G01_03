@@ -100,12 +100,12 @@
         <?php
             $sql = "SELECT * FROM  booking";
             $result = mysqli_query($conn, $sql);
-            while ($row=mysqli_fetch_array($ret)) {
+            while ($row=mysqli_fetch_array($result)) {
  
                 ?>
                 <tbody>
                 <tr>
-                <td><?php echo $cnt;?></td>
+                <td><?php echo $package_id;?></td>
                 <td><?php  echo $row['lmonth']."/".$row['lyear'];?></td>
                 <td><?php  echo $total=$row['SellingPrice']*$row['Quantity'];?></td>
                 </tr>
