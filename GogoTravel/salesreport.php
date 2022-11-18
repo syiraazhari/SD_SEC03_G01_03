@@ -86,7 +86,7 @@
             <h4 align="center">Sales Report Month Wise</h4>
             <h4 align="center" style="color:blue">Sales Report  from <?php echo $m1."-".$y1;?> to <?php echo $m2."-".$y2;?></h4>
      <hr>
-     <div class="row>
+     <div class="row">
         <table class="table table-bordered table-hover table-striped" style="table-layout: fixed">
         <thead>
         <tr>
