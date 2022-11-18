@@ -26,29 +26,29 @@
     <h1 align="center"><br>Sales Report</h1>
 
     <form name="bwdatesdata" action="" method="post" action="">
-            <table class="table table-bordered table-hover table-striped" style="table-layout: fixed">  
+        <table class="table table-bordered table-hover table-striped" style="table-layout: fixed">  
         <tr>
-        <th width="27%" height="63" scope="row">From Date :</th>
+        <th scope="row">From Date :</th>
         <td width="73%">
         <input type="date" name="fdate" class="form-control" id="fdate">
     	</td>
         </tr>
  
         <tr>
-        <th width="27%" height="63" scope="row">To Date :</th>
+        <th cope="row">To Date :</th>
         <td width="73%">
     	<input type="date" name="tdate" class="form-control" id="tdate"></td>
         </tr>
         
         <tr>
-        <th width="27%" height="63" scope="row">Request Type :</th>
+        <th scope="row">Request Type :</th>
         <td width="73%">
         <input type="radio" name="requesttype" value="mtwise" checked="true">Month wise
         <input type="radio" name="requesttype" value="yrwise">Year wise</td>
         </tr>
 
         <tr>
-        <th width="27%" height="63" scope="row"></th>
+        <th scope="row"></th>
         <td width="73%">
     	<button class="btn-primary btn" type="submit" name="submit">Check</button>
         </tr>
