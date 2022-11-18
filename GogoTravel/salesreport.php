@@ -25,31 +25,30 @@
 <div class="table-scrol">  
     <h1 align="center"><br>Sales Report</h1>
 
-    <form name="bwdatesdata" action="" method="post" action="">
         <table class="table table-bordered table-hover table-striped" style="table-layout: fixed">  
         <tr>
-        <th style="text-align: center" class="col-lg-1" scope="row">From Date :</th>
+        <th style="text-align: center" class="col-lg-1">From Date :</th>
         <input type="date" name="fdate" class="form-control" id="fdate">
     	</td>
         </tr>
  
         <tr>
-        <th style="text-align: center" class="col-lg-1" cope="row">To Date :</th>
+        <th style="text-align: center" class="col-lg-1">To Date :</th>
     	<input type="date" name="tdate" class="form-control" id="tdate"></td>
         </tr>
         
         <tr>
-        <th style="text-align: center" class="col-lg-1" scope="row">Request Type :</th>
+        <th style="text-align: center" class="col-lg-1">Request Type :</th>
         <input type="radio" name="requesttype" value="mtwise" checked="true">Month wise
         <input type="radio" name="requesttype" value="yrwise">Year wise</td>
         </tr>
 
         <tr>
-        <th style="text-align: center" class="col-lg-1" scope="row"></th>
+        <th style="text-align: center" class="col-lg-1"></th>
     	<button class="btn-primary btn" type="submit" name="submit">Check</button>
         </tr>
         </table>
-     </form>
+        
 </div>
 </body>
 </html>
