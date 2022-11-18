@@ -27,7 +27,7 @@
   <div class="col-sm-8">
     <div class="row">
         <div class="col-xs-12">
-        <h3 style="padding-left: 100px;">Sales Report</h3>
+        <h3>Sales Report</h3>
 		<hr>
 		<form name="bwdatesdata" action="" method="post" action="">
         <table width="100%" height="117"  border="0">
