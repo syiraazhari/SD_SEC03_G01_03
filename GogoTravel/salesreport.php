@@ -47,8 +47,8 @@
             
         ?>
         <tr>
-            <td style="text-align: center"><br><?php echo $package_id;  ?></td>  
-            <td style="text-align: center"><br><?php echo $tit;  ?></td>
+            <td style="text-align: center"><br><?php echo $package_id;?></td>  
+            <td style="text-align: center"><br><?php echo $title;?></td>
         <?php } ?>
         
         </table>
