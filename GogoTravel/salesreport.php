@@ -33,6 +33,21 @@
                     <input type="date" name="fdate" class="form-control" id="fdate">
     	        </td>
             </tr>
+
+            <tr>
+                <th scope="row">To Date :</th>
+                <td width="73%">
+                    <input type="date" name="tdate" class="form-control" id="tdate">
+    	        </td>
+            </tr>
+
+            <tr>
+                <th scope="row">Request Type :</th>
+                <td width="73%">
+                    <input type="radio" name="requesttype" value="mtwise" checked="true">Month wise
+                    <input type="radio" name="requesttype" value="yrwise">Year wise
+    	        </td>
+            </tr>
 </body>
  
 </html>>
