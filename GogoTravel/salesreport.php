@@ -105,7 +105,7 @@
                 ?>
                 <tbody>
                 <tr>
-                <td><?php echo $package_id;?></td>
+                <td><?php echo $row['package_id'];?></td>
                 <td><?php  echo $row['lmonth']."/".$row['lyear'];?></td>
                 <td><?php  echo $total=$row['SellingPrice']*$row['Quantity'];?></td>
                 </tr>
