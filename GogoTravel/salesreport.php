@@ -90,8 +90,8 @@
         <table class="table table-bordered table-hover table-striped" style="table-layout: fixed">
         <thead>
         <tr>
-            <th>S.NO</th>
-            <th>Month / Year </th>
+            <th>Package ID</th>
+            <th>Title</th>
             <th>Sales</th>
         </tr>
         </thead>
