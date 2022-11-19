@@ -62,7 +62,7 @@ if(isset($_POST['update'])){
         <link rel="stylesheet" href="css/main.css">
     </head>
     <body>
-
+    
         <!-- Start Align Area -->
         <div class="whole-wrap">
             <div class="container col-lg-4">

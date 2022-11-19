@@ -60,19 +60,19 @@
 									}
 									else if($usertype == 'admin'){
 										echo "
-										<li><a href='salesreport.php'>Sales</a></li>
 										<li><a href='services.php'>Service</a></li>
 										<li><a href='admin-view_staff.php'>Staff</a></li>
 										<li><a href='view_user.php'>User</a></li>
 										<li><a href='view_payment.php'>Payments</a></li>
+										<li><a href='salesreport.php'>Sales</a></li>
 										<li><a href='view_feedback.php'>Feedback</a></li>	";
 									}
 									else if($usertype == 'staff'){
 										echo "
-										<li><a href='salesreport.php'>Sales</a></li>
 										<li><a href='services.php'>Service</a></li>
 										<li><a href='view_user.php'>Users</a></li>
 										<li><a href='view_payment.php'>Payments</a></li>
+										<li><a href='salesreport.php'>Sales</a></li>
 										<li><a href='view_feedback.php'>Feedback</a></li>	";
 									}
 									?>

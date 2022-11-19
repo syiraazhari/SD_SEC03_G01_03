@@ -6,10 +6,10 @@
 							<div class="single-footer-widget">
 								<h6>About Us</h6>
 								<p>
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore dolore magna aliqua.
+									We are Year 3 Students from University Tekonologi Malaysia Kuala Lumpur.
 								</p>
 								<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-            		<p class="footer-text">Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a></p>
+            		<p class="footer-text">Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This website is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">GogoTravel</a></p>
             		<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 							</div>
 						</div>

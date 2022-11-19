@@ -11,7 +11,9 @@
 		$password = $_POST['password'];
 		$email = $_POST['email'];
 		$name = $_POST['name'];
+		$password = md5($password);
 
+		
 		//Instantiation and passing `true` enables exceptions
         $mail = new PHPMailer(true);
  

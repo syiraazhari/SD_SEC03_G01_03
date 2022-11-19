@@ -96,7 +96,7 @@
                                     $result = mysqli_query($conn, $sql);
                             
                                     while($row=mysqli_fetch_array($result))
-                                    {  $package_id=$row[0];  $title=$row[1];  $price=$row[2];  $memo=$row[3];  $duration=$row[4];  $location=$row[5];  }     
+                                    {  $package_id=$row[0];  $title=$row[1];  $price=$row[2];  $memo=$row[3];  $duration=$row[4];  $location=$row[5]; $img=$row[6]; }    
                                 ?>
                                 <h4><a href="#" ><?php echo $title; ?><br> *RM<?php echo $price; ?>* </a></h4>
                             </div>
@@ -120,7 +120,7 @@
                                         <br>
                                         </div>
                                         <div class="modal-body">
-                                        <img class="img-fluid" src="img/islandhopping.jpg" alt="">
+                                        <img class="img-fluid" src="img/cave.jpg" alt="">
                                         <br><br>
                                         <p style="color:black; font-size:15px;">Location: <?php echo $location ?> <br>
                                             Duration: <?php echo $duration ?> Days <br>
@@ -145,7 +145,7 @@
                                     $result = mysqli_query($conn, $sql);
                             
                                     while($row=mysqli_fetch_array($result))
-                                    {  $package_id=$row[0];  $title=$row[1];  $price=$row[2];  $memo=$row[3];  $duration=$row[4];  $location=$row[5];  }     
+                                    {  $package_id=$row[0];  $title=$row[1];  $price=$row[2];  $memo=$row[3];  $duration=$row[4];  $location=$row[5]; $img=$row[6]; }    
                                 ?>
                                 <h4><a href="#"><?php echo $title; ?><br> *RM<?php echo $price; ?>* </a></h4>
                             </div>
@@ -169,7 +169,7 @@
                                         <br>
                                         </div>
                                         <div class="modal-body">
-                                        <img class="img-fluid" src="img/islandhopping.jpg" alt="">
+                                        <img class="img-fluid" src="img/sabah.jpg" alt="">
                                         <br><br>
                                         <p style="color:black; font-size:15px;">Location: <?php echo $location ?> <br>
                                             Duration: <?php echo $duration ?> Days <br>
@@ -194,7 +194,7 @@
                                     $result = mysqli_query($conn, $sql);
                             
                                     while($row=mysqli_fetch_array($result))
-                                    {  $package_id=$row[0];  $title=$row[1];  $price=$row[2];  $memo=$row[3];  $duration=$row[4];  $location=$row[5];  }     
+                                    {  $package_id=$row[0];  $title=$row[1];  $price=$row[2];  $memo=$row[3];  $duration=$row[4];  $location=$row[5]; $img=$row[6]; }    
                                 ?>
                                 <h4><a href="#"><?php echo $title; ?><br> *RM<?php echo $price; ?>* </a></h4>
                             </div>
@@ -218,7 +218,7 @@
                                         <br>
                                         </div>
                                         <div class="modal-body">
-                                        <img class="img-fluid" src="img/islandhopping.jpg" alt="">
+                                        <img class="img-fluid" src="img/kl.jpg" alt="">
                                         <br><br>
                                         <p style="color:black; font-size:15px;">Location: <?php echo $location ?> <br>
                                             Duration: <?php echo $duration ?> Days <br>
@@ -243,7 +243,7 @@
                                     $result = mysqli_query($conn, $sql);
                             
                                     while($row=mysqli_fetch_array($result))
-                                    {  $package_id=$row[0];  $title=$row[1];  $price=$row[2];  $memo=$row[3];  $duration=$row[4];  $location=$row[5];  }     
+                                    {  $package_id=$row[0];  $title=$row[1];  $price=$row[2];  $memo=$row[3];  $duration=$row[4];  $location=$row[5]; $img=$row[6]; }    
                                 ?>
                                 <h4><a href="#"><?php echo $title; ?><br> *RM<?php echo $price; ?>* </a></h4>
                             </div>
@@ -267,7 +267,7 @@
                                         <br>
                                         </div>
                                         <div class="modal-body">
-                                        <img class="img-fluid" src="img/islandhopping.jpg" alt="">
+                                        <img class="img-fluid" src="img/pp.jpg" alt="">
                                         <br><br>
                                         <p style="color:black; font-size:15px;">Location: <?php echo $location ?> <br>
                                             Duration: <?php echo $duration ?> Days <br>
@@ -292,7 +292,7 @@
                                     $result = mysqli_query($conn, $sql);
                             
                                     while($row=mysqli_fetch_array($result))
-                                    {  $package_id=$row[0];  $title=$row[1];  $price=$row[2];  $memo=$row[3];  $duration=$row[4];  $location=$row[5];  }     
+                                    {  $package_id=$row[0];  $title=$row[1];  $price=$row[2];  $memo=$row[3];  $duration=$row[4];  $location=$row[5]; $img=$row[6]; }    
                                 ?>
                                 <h4><a href="#"><?php echo $title; ?><br> *RM<?php echo $price; ?>* </a></h4>
                             </div>
@@ -316,7 +316,7 @@
                                         <br>
                                         </div>
                                         <div class="modal-body">
-                                        <img class="img-fluid" src="img/islandhopping.jpg" alt="">
+                                        <img class="img-fluid" src="img/pahang.jpg" alt="">
                                         <br><br>
                                         <p style="color:black; font-size:15px;">Location: <?php echo $location ?> <br>
                                             Duration: <?php echo $duration ?> Days <br>
@@ -341,7 +341,7 @@
                                     $result = mysqli_query($conn, $sql);
                             
                                     while($row=mysqli_fetch_array($result))
-                                    {  $package_id=$row[0];  $title=$row[1];  $price=$row[2];  $memo=$row[3];  $duration=$row[4];  $location=$row[5];  }     
+                                    {  $package_id=$row[0];  $title=$row[1];  $price=$row[2];  $memo=$row[3];  $duration=$row[4];  $location=$row[5]; $img=$row[6]; }     
                                 ?>
                                 <h4><a href="#"><?php echo $title; ?><br> *RM<?php echo $price; ?>* </a></h4>
                             </div>
@@ -365,7 +365,7 @@
                                         <br>
                                         </div>
                                         <div class="modal-body">
-                                        <img class="img-fluid" src="img/islandhopping.jpg" alt="">
+                                        <img class="img-fluid" src="img/genting.jpg" alt="">
                                         <br><br>
                                         <p style="color:black; font-size:15px;">Location: <?php echo $location ?> <br>
                                             Duration: <?php echo $duration ?> Days <br>
@@ -392,7 +392,7 @@
             <div class="overlay overlay-bg"></div>
             <div class="container">
                 <div class="video-content">
-                    <a href="http://www.youtube.com/watch?v=0O2aH4XLbto" class="play-btn"><img src="img/play-btn.png" alt=""></a>
+                    <a href="https://www.youtube.com/watch?v=oOQ1SbkU_c4" class="play-btn"><img src="img/play-btn.png" alt=""></a>
                     <div class="video-desc">
                         <h3 class="h2 text-white text-uppercase">Being unique is the preference</h3>
                         <h4 class="text-white">Youtube video will appear in popover</h4>

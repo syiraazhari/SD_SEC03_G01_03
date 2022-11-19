@@ -29,15 +29,27 @@
         <table class="table table-bordered table-hover table-striped" style="table-layout: fixed">
         <thead>
         <tr>
-            <th style="text-align: center">Package ID</th>
-            <th style="text-align: center">Title</th>
-            <th style="text-align: center">Price</th>
+            <th style="text-align: center">Most to Least Purchased</th>
             <th style="text-align: center">Sales</th>
+            <?php 
+                // Build the list from a query result-set array
+                $list = "";
+                $num = 0;
+                $sql = "SELECT title, count(title) AS package_id FROM booking GROUP BY title ORDER BY package_id DESC";
+                $query = mysqli_query($conn, $sql);
+                while($row = mysqli_fetch_array($query, MYSQLI_ASSOC)){
+                    $num++;
+                    $title = $row["title"];
+                    $package_id = $row["package_id"];
+                    $list .= $num.') '.$title.' - <b>'.$package_id.'</b> customers<br><br><br>';
+                }
+
+            ?>
         </tr>
         </thead>
 
         <?php
-            $sql = "SELECT * FROM  packages";
+            $sql = "SELECT * FROM  packages WHERE package_id='1'";
             $result = mysqli_query($conn, $sql);
 
             while($row=mysqli_fetch_array($result)){
@@ -47,11 +59,9 @@
                 $sales=$row[3];
             
         ?>
-        <tr>
-            <td style="text-align: center"><br><?php echo $package_id;?></td>  
-            <td style="text-align: center"><br><?php echo $title;?></td>
-            <td style="text-align: center"><br><?php echo $price;?></td>
-            <td style="text-align: center"><br><?php echo $sales;?></td>
+        <tr> 
+            <td style=""><br><?php echo $list;?></td><br>
+            <td style="text-align: center; font-size: 80px"><br>RM7191</td><br>
         <?php } ?>
         
         </table>

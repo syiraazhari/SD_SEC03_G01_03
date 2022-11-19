@@ -31,52 +31,52 @@
 						<div class="menu-content pb-60 col-lg-8">
 							<div class="title text-center">
 								<h1 class="mb-10">Frequently Asked Questions</h1>
-								<p>Who are in extremely love with eco friendly system.</p>
+								<p>Who are in extremely love with travelling with nature.</p>
 							</div>
 						</div>
 					</div>							
 					<div class="row d-flex align-items-center">
 						<div class="counter-left col-lg-3 col-md-3">
 							<div class="single-facts">
-								<h2 class="counter">5962</h2>
-								<p>Projects Completed</p>							
+								<h2 class="">5962</h2>
+								<p>Packages Completed</p>							
 							</div>
 							<div class="single-facts">
-								<h2 class="counter">2394</h2>
-								<p>New Projects</p>							
+								<h2 class="">2394</h2>
+								<p>New Packages</p>							
 							</div>
 							<div class="single-facts">
-								<h2 class="counter">1439</h2>
+								<h2 class="">1439</h2>
 								<p>Tickets Submitted</p>							
 							</div>												
 							<div class="single-facts">
-								<h2 class="counter">933</h2>
+								<h2 class="">933</h2>
 								<p>Cup of Coffee</p>							
 							</div>
 						</div>	
 						<div class="faq-content col-lg-9 col-md-9">
 							<div class="single-faq">
 								<h2 class="text-uppercase">
-									Are your Templates responsive?
+									Why should we choose you?
 								</h2>
 								<p>
-									“Few would argue that, despite the advancements of feminism over the past three decades, women still face a double standard when it comes to their behavior. While men’s borderline-inappropriate behavior.
+									“Few would argue that, despite the advancements of technology these days, few are seem to tackle to hassle of travel planning.
 								</p>
 							</div>
 							<div class="single-faq">
 								<h2 class="text-uppercase">
-									Does it have all the plugin as mentioned?
+									Does it have all the needs as mentioned?
 								</h2>
 								<p>
-									“Few would argue that, despite the advancements of feminism over the past three decades, women still face a double standard when it comes to their behavior. While men’s borderline-inappropriate behavior.
+									“Gogo Travel Booking System is unique in a way that we actually provide packages that enables our customer to travel in just one click at anytime they want, this makes it much more easier for our customers.
 								</p>
 							</div>
 							<div class="single-faq">
 								<h2 class="text-uppercase">
-									Can i use the these theme for my client?
+									Who are you guys?
 								</h2>
 								<p>
-									“Few would argue that, despite the advancements of feminism over the past three decades, women still face a double standard when it comes to their behavior. While men’s borderline-inappropriate behavior.
+									“We are a group of students from University Tekonologi Malaysia Kuala Lumpur. We are currently in our year 3 – semester, which means we will soon be graduating.
 								</p>
 							</div>												
 						</div>									

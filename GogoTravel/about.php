@@ -54,19 +54,19 @@
 						</div>
 						<div class="col-lg-6 col-md-12 no-padding info-rigth">
 							<div class="info-content">
-								<h2 class="pb-30">We Realize that <br>
-								there are reduced <br>
-								Wastege Stand out</h2>
+								<h2 class="pb-30">We Realize That <br>
+								Travelling was <br>
+								Always a Hassle</h2>
 								<p>
-									inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct standards – especially in the workplace. That’s why it’s crucial that, as women.									
+									This is why we had this goal in mind in the first place to make a website for all that lets us travel  – with just a click . That’s why it’s crucial that we find a solution for all.									
 								</p>
 								<br>
 								<p>
-									inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct standards – especially in the workplace. That’s why it’s crucial that, as women. inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct standards – especially in the workplace. That’s why it’s crucial that, as women.									
+									We are a group of students from University Tekonologi Malaysia Kuala Lumpur. We are currently in our year 3 – semester, which means we will soon be graduating. 				
 								</p>
 								<br>
 								<p>
-									inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct standards – especially in the workplace. That’s why it’s crucial that, as women.
+									Before so, we hope that our ideas and goals will have an impact in travellers heart after visiting our page – as our concept is easy to grasp and most certainly feasable.
 								</p>
 								</div>
 						</div>

@@ -12,6 +12,7 @@ $select = mysqli_query($conn, "SELECT * FROM packages WHERE package_id = '$pkg_i
             $pkg_memo=$row[3];  
             $pkg_duration=$row[4]; 
             $pkg_location=$row[5];   
+            $pkg_img=$row[6];
         }
 
 if(isset($_POST['update-packages'])){
@@ -21,10 +22,10 @@ if(isset($_POST['update-packages'])){
     $update_memo = $_POST['update_memo'];
     $update_duration = $_POST['update_duration'];
     $update_location = $_POST['update_location'];
+    $update_img = $_POST['update_img'];
 
-    mysqli_query($conn, "UPDATE packages SET title = '$update_title', price = '$update_price', memo = '$update_memo' , duration = '$update_duration' , location = '$update_location' WHERE package_id = '$pkg_id'");
+    mysqli_query($conn, "UPDATE packages SET title = '$update_title', price = '$update_price', memo = '$update_memo' , duration = '$update_duration' , location = '$update_location' , image = '$update_img' WHERE package_id = '$pkg_id'");
 
-    session_destroy();
     header("location:services.php");
 }
 ?>
@@ -96,6 +97,10 @@ if(isset($_POST['update-packages'])){
                         <div>
                                 <label class="col-md-2"><br>Location:</label>
                                 <input type="text" id="memo" name="update_location" class="form-control" placeholder="Package Location" value="<?php echo $pkg_location; ?>" required>
+                        </div>
+                        <div>
+                                <label class="col-md-2"><br>Image:</label>
+                                <input type="file" id="memo" name="update_img" class="form-control" placeholder="Package Image" value="<?php echo $pkg_img; ?>" >
                         </div>	
                         <div class="col-md-8">
                             <br>

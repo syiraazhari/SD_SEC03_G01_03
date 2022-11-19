@@ -18,6 +18,7 @@ if(isset($_POST['update'])){
     $update_username = mysqli_real_escape_string($conn, $_POST['update_username']);
     $update_email = mysqli_real_escape_string($conn, $_POST['update_email']);
     $update_password = mysqli_real_escape_string($conn, $_POST['update_password']);
+    $update_password = md5($update_password);
 
     mysqli_query($conn, "UPDATE user SET password = '$update_password', name = '$update_name', username = '$update_username', email = '$update_email' WHERE id = '$id'");
 
