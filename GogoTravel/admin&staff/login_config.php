@@ -45,7 +45,7 @@
         $_SESSION['password'] = $row['password'];
         $_SESSION['id'] = $row['id'];
         $_SESSION['usertype'] = $row['usertype'];
-        header("location:admin&staff/services.php");
+        header("location:services.php");
       }
 
       elseif(@$row["usertype"]=='admin')
@@ -58,7 +58,7 @@
         $_SESSION['password'] = $row['password'];
         $_SESSION['id'] = $row['id'];
         $_SESSION['usertype'] = $row['usertype'];
-        header("location:admin&staff/services.php");
+        header("location:services.php");
       }
       else 
       {

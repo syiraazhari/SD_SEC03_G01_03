@@ -29,12 +29,12 @@
   
         <tr>  
   
-            <th style="text-align: center" class="col-lg-1">ID</th>  
-            <th style="text-align: center" class="col-lg-2">Full Name</th>
-            <th style="text-align: center" class="col-lg-1">Username</th>  
-            <th style="text-align: center" class="col-lg-1">Password</th>  
-            <th style="text-align: center" class="col-lg-1">Email</th>  
-            <th style="text-align: center" class="col-lg-1">Delete User</th>  
+            <th>ID</th>  
+            <th>Full Name</th>
+            <th>Username</th>  
+            <th>Password</th>  
+            <th>Email</th>  
+            <th>Delete User</th>  
         </tr>  
         </thead>
 
@@ -47,20 +47,20 @@
         while($row=mysqli_fetch_array($result))
         {  
             $user_id=$row[0];  
-            $user_fullname=$row[5];
+            $user_fullname=$row[2];
             $user_username=$row[1];  
-            $user_password=$row[2];  
-            $user_email=$row[3];  
+            $user_password=$row[3];  
+            $user_email=$row[4];   
         
         ?>
     
         <tr>
-            <td style="text-align: center"><?php echo $user_id;  ?></td>  
+            <td><?php echo $user_id;  ?></td>  
             <td><?php echo $user_fullname;  ?></td>
             <td><?php echo $user_username;  ?></td>  
             <td><?php echo $user_password;  ?></td>  
             <td><?php echo $user_email;  ?></td>  
-            <td style="text-align: center"><a href="delete-user.php?del=<?php echo $user_id ?>"><button class="btn btn-danger">Delete</button></a></td> <!--btn btn-danger is a bootstrap button to show danger-->  
+            <td><a href="delete-user.php?del=<?php echo $user_id ?>"><button class="btn btn-danger">Delete</button></a></td> <!--btn btn-danger is a bootstrap button to show danger-->  
         </tr>
     <?php } ?>
     </table>

@@ -20,6 +20,7 @@
         $name = $_POST['name'];
         $password = $_POST['password'];
         $email = $_POST['email'];
+        $password = md5($password);
         
     $conn = mysqli_connect("localhost", "root", "", "sd_g01_03");
     $sql = "INSERT INTO user (id, username, name, password, email, usertype) VALUES ('$staff_id' , '$username', '$name' , '$password' , '$email' , 'staff')";

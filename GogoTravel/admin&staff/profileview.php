@@ -15,15 +15,30 @@ if (isset($_GET['logout'])) {
 if(isset($_POST['update'])){
 
     $update_name = mysqli_real_escape_string($conn, $_POST['update_name']);
-    $update_username = mysqli_real_escape_string($conn, $_POST['update_username']);
     $update_email = mysqli_real_escape_string($conn, $_POST['update_email']);
-    $update_password = mysqli_real_escape_string($conn, $_POST['update_password']);
-
-    mysqli_query($conn, "UPDATE user SET password = '$update_password', name = '$update_name', username = '$update_username', email = '$update_email' WHERE id = '$id'");
-
-    session_destroy();
-    header("location:signin.php");
-}
+ 
+    mysqli_query($conn, "UPDATE `user` SET name = '$update_name', email = '$update_email' WHERE id = '$id'") or die('query failed');
+ 
+    $old_pass = $_POST['old_pass'];
+    $update_pass = mysqli_real_escape_string($conn, md5($_POST['update_pass']));
+    $new_pass = mysqli_real_escape_string($conn, md5($_POST['new_pass']));
+    $confirm_pass = mysqli_real_escape_string($conn, md5($_POST['confirm_pass']));
+ 
+    if(!empty($update_pass) && !empty($new_pass) && !empty($confirm_pass)){
+       if($update_pass != $old_pass){
+          $message[] = 'Current password not matched!';
+       }elseif($new_pass != $confirm_pass){
+          $message[] = 'Confirm password not matched!';
+       }else{
+          mysqli_query($conn, "UPDATE `user` SET password = '$confirm_pass' WHERE id = '$id'") or die('query failed');
+          $message[] = 'Profile Updated successfully!';
+       }
+    }else{
+        $message[] = 'Profile Updated successfully!';
+       }
+ 
+ 
+ }
 ?>
 <!DOCTYPE html>
 <html lang="zxx" class="no-js">
@@ -47,20 +62,20 @@ if(isset($_POST['update'])){
         <link rel="stylesheet" href="css/main.css">
     </head>
     <body>
-
+    
         <!-- Start Align Area -->
         <div class="whole-wrap">
             <div class="container col-lg-4">
                 <div class="section-top-border">
-                    <div class="row">
-                        <div class="col-lg-10 col-md-10">
+                    <div class="row" style="background-color: rgb(220,220,220);">  <!-- start of profile info -->
+                        <div class="col-lg-10 col-md-15">
                             <?php
                                 $select = mysqli_query($conn, "SELECT * FROM `user` WHERE id = '$id'") or die('query failed');
                                 if(mysqli_num_rows($select) > 0){
                                     $fetch = mysqli_fetch_assoc($select);
                                 }
                             ?>
-                            <h3 class="mb-30">Edit Profile</h3>
+                            <h2 class="mb-30" style="background-color: rgb(169,169,169)">My Profile</h2>
 
                             <div class="col-md-3">
                                 <div class="text-center">
@@ -78,40 +93,24 @@ if(isset($_POST['update'])){
                             </div>
                             <!-- edit form column -->
 
-                            <form action="#" method="POST">
-                                <div class="mt-10">
-                                    <label class="col-md-3">Full Name:</label>
-                                    <input type="text" name="update_name" class="form-control" placeholder="Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Full Name'" value="<?php echo $fetch['name']; ?>" required>
+                            <form action="login_config.php" method="POST">
+                                <div class="col-lg-12 col-md-12 mt-20">
+                                    <p class=fz-18>Full Name: <?php echo $fetch['name']; ?></p>
                                 </div>
                                 <br>
-                                <div class="mt-10">
-                                    <label class="col-md-3">Username:</label>
-                                    <input type="text" name="update_username" class="form-control" placeholder="Username" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Username'" value="<?php echo $fetch['username']; ?>" required>
+                                <div class="col-lg-10 col-md-12 mt-1">
+                                    <p class=fz-18>Username: <?php echo $fetch['username']; ?></p>
                                 </div>
                                 <br>
-                                <div class="mt-10">
-                                    <label class="col-md-3">E-mail:</label>
-                                    <input type="email" name="update_email" class="form-control" placeholder="Email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'E-mail'" value="<?php echo $fetch['email']; ?>" required>
+                                <div class="col-lg-10 col-md-12 mt-1">
+                                    <p class=fz-18>E-mail: <?php echo $fetch['email']; ?></p>
                                 </div>
-                                <br>
-
-                                <div class="mt-10">
-                                    <input type="password" name = "updatecurrent_pass" placeholder="Enter current password" class="form-control">
-                                </div>                          
-                                    
-                                <div class="mt-10">
-                                    <input type="password" name = "new_pass" placeholder="Enter new password"class="form-control">
-                                </div>
-                                    
-                                <div class="mt-10">
-                                    <input type="password" name="update_password" placeholder="Confirm password" class="form-control">
-                                </div>
-                                <br>            
+                                <br>           
                                     <label class="col-md-3"></label>
                                 <div class="col-md-8">
-                                    <input type="submit" class="btn btn-primary" name="update" value="Save ">
+                                    <a href="profile2.php">Edit Profile <br></a>
+                                    <br>
                                     <span></span>
-                                    <a href="javascript:history.back()">Go Back</a>
                                 </div>
                             </form>
                         </div>

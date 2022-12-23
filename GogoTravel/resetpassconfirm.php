@@ -30,6 +30,7 @@
 
 
             $cpassword = $_POST["cpassword"];
+            $cpassword = md5($cpassword);
     
             // connect with database
             $conn = mysqli_connect("localhost", "root", "", "sd_g01_03");

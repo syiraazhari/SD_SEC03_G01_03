@@ -169,6 +169,7 @@ if(!empty($_GET['session_id'])){
 					</div>
 				</div>
 			</section>
+        
 
 
 			<script src="js/vendor/jquery-2.2.4.min.js"></script>

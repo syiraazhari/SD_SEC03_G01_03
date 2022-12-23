@@ -50,7 +50,7 @@
             $user_password=$row[3];  
             $user_email=$row[4];  
         
-            $show = "<p> Username : $user_username </p>" . "<p> Email : $user_email </p>" . "<p> Password : $user_password </p>" 
+            $show = "<p> Username : $user_username </p>" . "<p> Email : $user_email </p>" 
         ?>
     
         <tr>
